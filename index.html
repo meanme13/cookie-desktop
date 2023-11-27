@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+    <!-- <div id="modalWindow" class="modal-window">
+        
+        <div class="buttons">
+            <button class="send-wishes btn" id="sendWishes">Отправить пожелания</button>
+            <button class="close-modal btn" id="closeModal">Закрыть окно</button>
+        </div>
+    </div> -->
+
+    <button class="open-modal btn" id="openModal">Написать пожелания</button>
+
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+
+        <a-assets>
+            <a-asset-item id="animatedModel" src="models/cookie.glb"></a-asset-item>
+
+            <a-cubemap id="cubemap">
+                <img src="cubeMap/negx.jpg">
+                <img src="cubeMap/negy.jpg">
+                <img src="cubeMap/negz.jpg">
+                <img src="cubeMap/posx.jpg">
+                <img src="cubeMap/posy.jpg">
+                <img src="cubeMap/posz.jpg">
+            </a-cubemap>
+        </a-assets>
+
+        <!-- AR camera -->
+        <a-entity camera position="0 0 5"></a-entity>
+
+        <a-entity
+            light="type: directional;
+                intensity: 0.5;
+                castShadow: true;
+                shadowMapHeight:2048;
+                shadowMapWidth:2048;
+                shadowCameraTop: 10;
+                target: #model;
+                color: #FFFFFF"
+            position="1 4.3 2.5"
+            shadow>
+        </a-entity>
+
+        <!-- <a-light type="ambient" intensity="0.3" color="#ffffff"></a-light> -->
+
+        <a-light type="probe" envMap="#cubemap" intensity="0.3"></a-light>
+
+        <a-entity
+            id="model"
+            gltf-model="#animatedModel"
+            scale="1 1 1"
+            position="0 0 -5"
+            animation-mixer="clip: chicken; loop: repeat"
+            shadow="receive: false">
+        </a-entity>
+        
+    </a-scene>
+
+    <script src="app.js"></script>
+</body>
+</html>
