@@ -14,8 +14,8 @@
     <a-scene vr-mode-ui="enabled: false" mouse-move>
 
         <a-assets>
-            <a-asset-item id="animatedModel" src="models/drg_bronze.glb"></a-asset-item>
-            <a-asset-item id="animatedModel2" src="models/drg_colored.glb"></a-asset-item>
+            <a-asset-item id="animatedModel" src="models/bronze.glb"></a-asset-item>
+            <a-asset-item id="animatedModel2" src="models/clown.glb"></a-asset-item>
         </a-assets>
 
         <!-- <a-entity camera position="0 0 5"></a-entity> -->
@@ -41,9 +41,9 @@
             id="model"
             gltf-model="#animatedModel"
             scale="1 1 1"
-            position="1 0.9 -3.5"
-            rotation="0 -45 0"
-            animation-mixer="clip: DOG; loop: repeat"
+            position="1 1.2 -3.1"
+            rotation="0 -55 0"
+            animation-mixer="clip: clip1; loop: repeat"
             shadow="receive: false"
             visible="true"
             cube-env-map="path: cubeMap/;
@@ -56,9 +56,9 @@
             id="model2"
             gltf-model="#animatedModel2"
             scale="1 1 1"
-            position="1 0.9 -3.5"
-            rotation="0 -45 0"
-            animation-mixer="clip: DOG; loop: repeat"
+            position="1 1.2 -3.1"
+            rotation="0 -55 0"
+            animation-mixer="clip: clip1; loop: repeat"
             shadow="receive: false"
             visible="false"
             cube-env-map="path: cubeMap/;
