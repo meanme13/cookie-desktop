@@ -14,11 +14,10 @@
     <a-scene vr-mode-ui="enabled: false" mouse-move>
 
         <a-assets>
-            <a-asset-item id="animatedModel" src="models/bronze.glb"></a-asset-item>
-            <a-asset-item id="animatedModel2" src="models/Drakon.glb"></a-asset-item>
+            <a-asset-item id="animatedModel" src="models/drg_bronze.glb"></a-asset-item>
+            <a-asset-item id="animatedModel2" src="models/drg_colored.glb"></a-asset-item>
         </a-assets>
 
-        <!-- AR camera -->
         <!-- <a-entity camera position="0 0 5"></a-entity> -->
         <a-camera look-controls-enabled="false"></a-camera>
 
@@ -49,7 +48,7 @@
             visible="true"
             cube-env-map="path: cubeMap/;
                  extension: hdr;
-                 reflectivity: 0.9;"
+                 reflectivity: 1.5;"
             >
         </a-entity>
         
@@ -68,11 +67,6 @@
             >
         </a-entity>
 
-        <!-- <a-sky src="layer.jpg" rotation="0 -90 0"></a-sky> -->
-
-        <!-- <a-plane width="10" height="10" color="#333" position="0 -2 0" rotation="-90 0 0"></a-plane> -->
-
-        <!-- Изображение -->
         <a-image src="layer.jpg" width="19" height="12" position="0 1.5 -5.7" rotation="0 0 0"></a-image>
         
     </a-scene>
