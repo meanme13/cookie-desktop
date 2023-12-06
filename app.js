@@ -25,15 +25,15 @@ AFRAME.registerComponent("mouse-move", {
         //     })
         //     isMoved = false;
         // }
-        let model = document.getElementById('model');
-        let model2 = document.getElementById('model2');
+        // let model = document.getElementById('model');
+        // let model2 = document.getElementById('model2');
 
-        if (model.getAttribute("visible")) {
-            model.setAttribute("visible", false);
-            model2.setAttribute("visible", true);
-        } else {
-            model.setAttribute("visible", true);
-            model2.setAttribute("visible", false);
-        }
+        // if (model.getAttribute("visible")) {
+        //     model.setAttribute("visible", false);
+        //     model2.setAttribute("visible", true);
+        // } else {
+        //     model.setAttribute("visible", true);
+        //     model2.setAttribute("visible", false);
+        // }
     }
 });
