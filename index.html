@@ -4,44 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link href="https://fonts.cdnfonts.com/css/circe" rel="stylesheet">
 </head>
 <body style="margin: 0; overflow: hidden;">
 
-    <!-- <div id="modalWindow" class="modal-window">
-        
-        <div class="buttons">
-            <button class="send-wishes btn" id="sendWishes">Отправить пожелания</button>
-            <button class="close-modal btn" id="closeModal">Закрыть окно</button>
-        </div>
-    </div> -->
-
-    <button class="open-modal btn" id="openModal">Написать пожелания</button>
-
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene vr-mode-ui="enabled: false" mouse-move>
 
         <a-assets>
-            <a-asset-item id="animatedModel" src="models/cookie.glb"></a-asset-item>
-
-            <a-cubemap id="cubemap">
-                <img src="cubeMap/negx.jpg">
-                <img src="cubeMap/negy.jpg">
-                <img src="cubeMap/negz.jpg">
-                <img src="cubeMap/posx.jpg">
-                <img src="cubeMap/posy.jpg">
-                <img src="cubeMap/posz.jpg">
-            </a-cubemap>
+            <a-asset-item id="animatedModel" src="models/bronze.glb"></a-asset-item>
+            <a-asset-item id="animatedModel2" src="models/Drakon.glb"></a-asset-item>
         </a-assets>
 
         <!-- AR camera -->
-        <a-entity camera position="0 0 5"></a-entity>
+        <!-- <a-entity camera position="0 0 5"></a-entity> -->
+        <a-camera look-controls-enabled="false"></a-camera>
 
         <a-entity
             light="type: directional;
-                intensity: 0.5;
+                intensity: 1.5;
                 castShadow: true;
                 shadowMapHeight:2048;
                 shadowMapWidth:2048;
@@ -52,18 +35,45 @@
             shadow>
         </a-entity>
 
-        <!-- <a-light type="ambient" intensity="0.3" color="#ffffff"></a-light> -->
-
-        <a-light type="probe" envMap="#cubemap" intensity="0.3"></a-light>
+        <a-light type="ambient" intensity="0.3" color="#c30010"></a-light>
+        <a-light type="ambient" intensity="1.5" color="#ffffff"></a-light>
 
         <a-entity
             id="model"
             gltf-model="#animatedModel"
             scale="1 1 1"
-            position="0 0 -5"
-            animation-mixer="clip: chicken; loop: repeat"
-            shadow="receive: false">
+            position="1 0.9 -3.5"
+            rotation="0 -45 0"
+            animation-mixer="clip: DOG; loop: repeat"
+            shadow="receive: false"
+            visible="true"
+            cube-env-map="path: cubeMap/;
+                 extension: hdr;
+                 reflectivity: 0.9;"
+            >
         </a-entity>
+        
+        <a-entity
+            id="model2"
+            gltf-model="#animatedModel2"
+            scale="1 1 1"
+            position="1 0.9 -3.5"
+            rotation="0 -45 0"
+            animation-mixer="clip: DOG; loop: repeat"
+            shadow="receive: false"
+            visible="false"
+            cube-env-map="path: cubeMap/;
+                 extension: hdr;
+                 reflectivity: 0.5;"
+            >
+        </a-entity>
+
+        <!-- <a-sky src="layer.jpg" rotation="0 -90 0"></a-sky> -->
+
+        <!-- <a-plane width="10" height="10" color="#333" position="0 -2 0" rotation="-90 0 0"></a-plane> -->
+
+        <!-- Изображение -->
+        <a-image src="layer.jpg" width="19" height="12" position="0 1.5 -5.7" rotation="0 0 0"></a-image>
         
     </a-scene>
 
