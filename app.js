@@ -83,7 +83,7 @@ AFRAME.registerComponent("mouse-move", {
 
 AFRAME.registerComponent('fade-in', {
     schema: {
-        duration: {type: 'number', default: 500},
+        duration: {type: 'number', default: 550},
     },
 
     init() {
