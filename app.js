@@ -31,13 +31,13 @@ AFRAME.registerComponent("mouse-move", {
         this.el.addEventListener('touchend', this.handleTouchEnd);
         
         if (isMobileDevice()) {
-            light1.setAttribute("position", "10 8 -7");
-            light2.setAttribute("position", "-10 8 -7");
+            light1.setAttribute("position", "10 8 -20");
+            light2.setAttribute("position", "-10 8 -20");
             light3.setAttribute("position", "0 -7 -7");
 
-            model.setAttribute("position", "0.2 3.2 -10.8");
-            model2.setAttribute("position", "0 1 -6");
-            model3.setAttribute("position", "0 1 -6");
+            model.setAttribute("position", "0.1 3.2 -23");
+            model2.setAttribute("position", "0 1 -10");
+            model3.setAttribute("position", "0 1 -10");
 
             model2.setAttribute("rotation", "0 0 0");
             model3.setAttribute("rotation", "0 0 0");
