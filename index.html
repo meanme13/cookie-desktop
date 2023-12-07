@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js" integrity="sha512-auFmPm+de880vk/c+bgBmuOnQ7BM28z7zPWmepVgX8737t75OHZjElOnQqERwP8cE4DIyCJ+gb1kE0b/eLWcnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.cdnfonts.com/css/circe" rel="stylesheet">
@@ -41,7 +42,7 @@
         <a-entity
         id="light1"
             light="type: directional;
-                intensity: 2.3;
+                intensity: 2.1;
                 castShadow: true;
                 shadowMapHeight:2048;
                 shadowMapWidth:2048;
@@ -113,6 +114,7 @@
         </a-entity>
 
         <a-entity
+            fade-in
             id="model2"
             gltf-model="#animatedModel2"
             scale="1 1 1"
