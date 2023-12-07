@@ -15,6 +15,7 @@
 
         <a-assets>
             <a-asset-item id="animatedModel" src="models/bronze.glb"></a-asset-item>
+            <a-asset-item id="animatedModel2" src="models/cocky.glb"></a-asset-item>
         </a-assets>
 
         <!-- <a-entity camera position="0 0 5"></a-entity> -->
@@ -74,6 +75,31 @@
             cube-env-map="path: cubeMap/;
                  extension: hdr;
                  reflectivity: 2.5;"
+            >
+        </a-entity>
+
+        <a-entity
+            id="model2"
+            gltf-model="#animatedModel2"
+            scale="1 1 1"
+            position="0 1 -6"
+            visible="true"
+            shadow="receive: false"
+            cube-env-map="path: cubeMap/;
+                 extension: hdr;
+                 reflectivity: 0.2;"
+            >
+        </a-entity>
+        
+        <a-entity
+            id="model3"
+            scale="1 1 1"
+            position="0 1 -6"
+            visible="false"
+            shadow="receive: false"
+            cube-env-map="path: cubeMap/;
+                 extension: hdr;
+                 reflectivity: 0.9;"
             >
         </a-entity>
 

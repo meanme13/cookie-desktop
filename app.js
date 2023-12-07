@@ -4,6 +4,8 @@ AFRAME.registerComponent("mouse-move", {
     init: function () {
         this.handleMouseMove = this.handleMouseMove.bind(this);
         this.handleMouseUp = this.handleMouseUp.bind(this);
+        let model3 = document.getElementById('model3');
+        model3.setAttribute("gltf-model", `models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
 
         this.el.addEventListener('mousemove', this.handleMouseMove);
         this.el.addEventListener('mouseup', this.handleMouseUp);
@@ -16,24 +18,14 @@ AFRAME.registerComponent("mouse-move", {
     },
 
     handleMouseUp: function (event) {
-        // if (isMoved) {
-        //     let model = document.getElementById('model');
-        //     model.setAttribute('animation-mixer', {
-        //         clip: 'pockets',
-        //         loop: 'repeat',
-        //         crossFadeDuration: 0.4,
-        //     })
-        //     isMoved = false;
-        // }
-        // let model = document.getElementById('model');
-        // let model2 = document.getElementById('model2');
+        let model2 = document.getElementById('model2');
+        let model3 = document.getElementById('model3');
 
-        // if (model.getAttribute("visible")) {
-        //     model.setAttribute("visible", false);
-        //     model2.setAttribute("visible", true);
-        // } else {
-        //     model.setAttribute("visible", true);
-        //     model2.setAttribute("visible", false);
-        // }
+        if (isMoved) {
+            model2.setAttribute("animation-mixer", "clip: cock; clampWhenFinished: true; loop: once");
+            model3.setAttribute("visible", true);
+            model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
+            isMoved = false;
+        }
     }
 });
