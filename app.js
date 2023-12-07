@@ -18,6 +18,7 @@ AFRAME.registerComponent("mouse-move", {
         var light3 = document.getElementById('light3');
         var preloader = document.getElementById('preloader');
         model3.setAttribute("gltf-model", `models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
+        // model3.setAttribute("gltf-model", `models/temp.glb`);
 
         if (model && model2 && model3) {
             setTimeout(() => {
@@ -31,16 +32,23 @@ AFRAME.registerComponent("mouse-move", {
         this.el.addEventListener('touchend', this.handleTouchEnd);
         
         if (isMobileDevice()) {
-            light1.setAttribute("position", "10 8 -20");
-            light2.setAttribute("position", "-10 8 -20");
-            light3.setAttribute("position", "0 -7 -7");
+            // light1.setAttribute("position", "10 8 -20");
+            // light2.setAttribute("position", "-10 8 -20");
+            // light3.setAttribute("position", "0 -7 -7");
+            light1.setAttribute("position", "10 10 -23");
+            light2.setAttribute("position", "0 8 -21");
+            light3.setAttribute("position", "2 -7 -7");
 
-            model.setAttribute("position", "0.1 3.2 -23");
+
+            model.setAttribute("position", "0.1 2.8 -23");
             model2.setAttribute("position", "0 1 -10");
             model3.setAttribute("position", "0 1 -10");
 
+            model.setAttribute("rotation", "0 -25 0");
             model2.setAttribute("rotation", "0 0 0");
             model3.setAttribute("rotation", "0 0 0");
+
+            model.setAttribute("scale", "1.2 1.2 1.2");
         }
     },
 
@@ -52,7 +60,7 @@ AFRAME.registerComponent("mouse-move", {
 
     handleMouseUp: function (event) {
         if (isMoved) {
-            model2.setAttribute("animation-mixer", "clip: cock; clampWhenFinished: true; loop: once");
+            model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
             model3.setAttribute("visible", true);
             model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
             isMoved = false;
@@ -65,7 +73,7 @@ AFRAME.registerComponent("mouse-move", {
 
     handleTouchEnd: function (event) {
         if (isMoved) {
-            model2.setAttribute("animation-mixer", "clip: cock; clampWhenFinished: true; loop: once");
+            model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
             model3.setAttribute("visible", true);
             model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
             isMoved = false;
