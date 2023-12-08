@@ -99,3 +99,88 @@ div.spinner div.bar12 {
         height: 74px;
     }
 }
+
+.a-modal {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.60);
+    background-size: 50% 50%;
+    bottom: 0;
+    font-weight: 600;
+    left: 0;
+    line-height: 20px;
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+}
+
+.a-dialog {
+    border-radius: 17px;
+    background-color: #F6E5DA;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 199995;
+    width: 259px;
+    height: 161px;
+    background-size: contain;
+    padding: 6px;
+}
+
+.a-dialog-text-container {
+    width: 100%;
+    height: 65%;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.a-dialog-text {
+    text-align: center;
+    font-family: 'Circe', sans-serif;
+    font-size: 15px;
+    display: inline-block;
+    font-weight: normal;
+    margin: 8px;
+}
+
+.a-dialog-buttons-container {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    justify-content: space-evenly;
+}
+
+.a-dialog-allow-button {
+    background-color: #CBB199;
+}
+
+.a-dialog-deny-button {
+    background-color: #DECFC6;
+}
+
+.a-dialog-button {
+    font-family: 'Circe', sans-serif;
+    color: #000000;
+    border-radius: 5px;
+    font-weight: normal;
+    padding: 20px 20px;
+    width: 115px;
+    height: 27px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    align-self: center;
+    opacity: 0.9;
+    margin: 4px;
+    text-align: center;
+    border: none;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.21), 0 2px 2px rgba(0, 0, 0, 0.21);
+}
