@@ -24,6 +24,10 @@ AFRAME.registerComponent("mouse-move", {
             setTimeout(() => {
                 preloader.style.display = 'none';
             }, 1000);
+
+            setTimeout(() => {
+                model2.setAttribute("shadow", "receive: true; cast: true");
+            }, 2300);
         }
 
         this.el.addEventListener('mousemove', this.handleMouseMove);
