@@ -18,7 +18,6 @@ AFRAME.registerComponent("mouse-move", {
         var light3 = document.getElementById('light3');
         var preloader = document.getElementById('preloader');
         model3.setAttribute("gltf-model", `models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
-        // model3.setAttribute("gltf-model", `models/temp.glb`);
 
         if (model && model2 && model3) {
             setTimeout(() => {
@@ -26,8 +25,8 @@ AFRAME.registerComponent("mouse-move", {
             }, 1000);
 
             setTimeout(() => {
-                model2.setAttribute("shadow", "receive: true; cast: true");
-            }, 2300);
+                model.setAttribute("animation", 'property: position; from: 0.6 -6.5 -3; to: 0.6 -6 -3; dir: alternate; dur: 3000; loop: true; easing: easeInOutSine');
+            }, 19000);
         }
 
         this.el.addEventListener('mousemove', this.handleMouseMove);
@@ -123,4 +122,16 @@ AFRAME.registerComponent('fade-in', {
         }
         });
     },
+});
+
+AFRAME.registerComponent("get-model-lower", {
+    init: function () {
+        const el = this.el;
+        console.log('Component initialized', el);
+
+        this.el.addEventListener('animation-finished', (event) => {
+            console.info(event);
+            this.el.setAttribute('animation', 'property: position; to: 0.6 -3.5 -3; dur: 1000; easing: easeOutQuart');
+        });
+    }
 });
