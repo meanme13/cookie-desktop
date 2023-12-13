@@ -8,28 +8,80 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js" integrity="sha512-auFmPm+de880vk/c+bgBmuOnQ7BM28z7zPWmepVgX8737t75OHZjElOnQqERwP8cE4DIyCJ+gb1kE0b/eLWcnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/stars.css">
     <link href="https://fonts.cdnfonts.com/css/circe" rel="stylesheet">
 </head>
 <body style="margin: 0; overflow: hidden;">
 
-    <div id="preloader" class="preloader">
-        <div class="spinner">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            <div class="bar4"></div>
-            <div class="bar5"></div>
-            <div class="bar6"></div>
-            <div class="bar7"></div>
-            <div class="bar8"></div>
-            <div class="bar9"></div>
-            <div class="bar10"></div>
-            <div class="bar11"></div>
-            <div class="bar12"></div>
+    <div class="background">
+        <img class="background-img" src="trees.svg" alt="trees">
+
+        <div class="stars-container">
+            <div class="stars">
+                <div class="star star1"></div>
+                <div class="star star2"></div>
+                <div class="star star3"></div>
+                <div class="star star4"></div>
+                <div class="star star5"></div>
+                <div class="star star6"></div>
+                <div class="star star7"></div>
+                <div class="star star8"></div>
+                <div class="star star9"></div>
+                <div class="star star10"></div>
+                
+                <div class="star star11"></div>
+                <div class="star star12"></div>
+                <div class="star star13"></div>
+                <div class="star star14"></div>
+                <div class="star star15"></div>
+                <div class="star star16"></div>
+                <div class="star star17"></div>
+                <div class="star star18"></div>
+                <div class="star star19"></div>
+                <div class="star star20"></div>
+                
+                <div class="star star21"></div>
+                <div class="star star22"></div>
+                <div class="star star23"></div>
+                <div class="star star24"></div>
+                <div class="star star25"></div>
+                <div class="star star26"></div>
+                <div class="star star27"></div>
+                <div class="star star28"></div>
+                <div class="star star29"></div>
+                <div class="star star30"></div>
+                
+                <div class="star star31"></div>
+                <div class="star star32"></div>
+                <div class="star star33"></div>
+                <div class="star star34"></div>
+                <div class="star star35"></div>
+                <div class="star star36"></div>
+                <div class="star star37"></div>
+                <div class="star star38"></div>
+                <div class="star star39"></div>
+                <div class="star star40"></div>
+                
+                <div class="star star41"></div>
+                <div class="star star42"></div>
+                <div class="star star43"></div>
+                <div class="star star44"></div>
+                <div class="star star45"></div>
+                <div class="star star46"></div>
+                <div class="star star47"></div>
+                <div class="star star48"></div>
+                <div class="star star49"></div>
+                <div class="star star50"></div>
+            </div>
         </div>
     </div>
 
-    <a-scene vr-mode-ui="enabled: false" mouse-move style="width: 100%; height: 100%;">
+    <div id="preloader" class="preloader">
+        <span class="loader"></span>
+        <p class="loader-text">Загружаем...</p>
+    </div>
+
+    <a-scene vr-mode-ui="enabled: false" mouse-move style="width: 100%; height: 100%; background: transparent;">
 
         <a-assets>
             <a-asset-item id="animatedModel" src="models/drgn.glb"></a-asset-item>
@@ -39,7 +91,7 @@
         <!-- <a-entity camera position="0 0 5"></a-entity> -->
         <a-camera look-controls-enabled="false" fov="40" position="0 2 15"></a-camera>
 
-        <a-entity
+        <!-- <a-entity
         id="light1"
             light="type: directional;
                 intensity: 2.2;
@@ -80,7 +132,7 @@
                 color: #e3ba32"
             position="-2 1 10"
             shadow>
-        </a-entity>
+        </a-entity> -->
         
         <!-- <a-entity
         id="light4"
@@ -100,7 +152,7 @@
     <!-- position="1.5 1.4 -10.8" -->
 
         <!-- <a-light type="ambient" intensity="0.3" color="#c30010"></a-light> -->
-        <a-light type="ambient" intensity="0.7" color="#ddd"></a-light>
+        <!-- <a-light type="ambient" intensity="0.7" color="#ddd"></a-light> -->
 
         <!-- <a-entity
             id="model"
@@ -146,7 +198,7 @@
             >
         </a-entity> -->
 
-        <a-entity
+        <!-- <a-entity
             id="model"
             gltf-model="#animatedModel"
             scale="3 3 3"
@@ -155,7 +207,7 @@
             animation-mixer="clip: clip1; loop: once; clampWhenFinished: true; timeScale: 1"
             animation='property: position; to: 0.6 -6.5 -3; dur: 18000; easing: easeOutQuart; delay: 0'
             shadow="receive: true;"
-            visible="true"
+            visible="false"
             cube-env-map="path: cubeMap/;
                  extension: hdr;
                  reflectivity: 2.5;"
@@ -168,7 +220,7 @@
             scale="3.5 3.5 3.5"
             position="0 0 -3"
             rotation="0 0 0"
-            visible="true"
+            visible="false"
             animation-mixer="clip: cock; timeScale: 0"
             animation='property: rotation; from: 0 -360 0; to: 0 360 0; dur: 3500; easing: easeOutQuart; delay: 0; loop: 1'
             shadow="receive: true; cast: true"
@@ -189,9 +241,9 @@
                  extension: hdr;
                  reflectivity: 0;"
             >
-        </a-entity>
+        </a-entity> -->
 
-        <a-sky color="#24292E"></a-sky>
+        <!-- <a-sky color="#24292E"></a-sky> -->
         
         <!-- <a-plane 
             width="500" 
@@ -203,15 +255,15 @@
             material="blending: multiply"
         ></a-plane> -->
 
-        <a-plane 
+        <!-- <a-plane 
             width="500" 
             height="500" 
-            color="#24292E" 
+            color="#24292E"
             position="0 -1 -60" 
             rotation="0 0 0" 
-            shadow="receive: true"
-            material="blending: multiply"
-        ></a-plane>
+            shadow="receive: false"
+            material="blending: normal"
+        ></a-plane> -->
         
     </a-scene>
 

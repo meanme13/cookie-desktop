@@ -10,49 +10,52 @@ AFRAME.registerComponent("mouse-move", {
         this.handleTouchMove = this.handleTouchMove.bind(this);
         this.handleTouchEnd = this.handleTouchEnd.bind(this);
 
-        var model = document.getElementById('model');
-        var model2 = document.getElementById('model2');
-        var model3 = document.getElementById('model3');
-        var light1 = document.getElementById('light1');
-        var light2 = document.getElementById('light2');
-        var light3 = document.getElementById('light3');
-        var preloader = document.getElementById('preloader');
-        model3.setAttribute("gltf-model", `models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
+        // var model = document.getElementById('model');
+        // var model2 = document.getElementById('model2');
+        // var model3 = document.getElementById('model3');
+        // var light1 = document.getElementById('light1');
+        // var light2 = document.getElementById('light2');
+        // var light3 = document.getElementById('light3');
+        // var preloader = document.getElementById('preloader');
+        // model3.setAttribute("gltf-model", `models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
 
-        if (model && model2 && model3) {
-            setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 1000);
+        // if (model && model2 && model3) {
+        //     setTimeout(() => {
+        //         preloader.style.display = 'none';
+        //     }, 1000);
 
-            setTimeout(() => {
-                model.setAttribute("animation", 'property: position; from: 0.6 -6.5 -3; to: 0.6 -6 -3; dir: alternate; dur: 3000; loop: true; easing: easeInOutSine');
-            }, 19000);
-        }
+        //     setTimeout(() => {
+        //         model.setAttribute("animation", 'property: position; from: 0.6 -6.5 -3; to: 0.6 -6 -3; dir: alternate; dur: 3000; loop: true; easing: easeInOutSine');
+        //     }, 19000);
+        // }
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 4000);
 
         this.el.addEventListener('mousemove', this.handleMouseMove);
         this.el.addEventListener('mouseup', this.handleMouseUp);
         this.el.addEventListener('touchmove', this.handleTouchMove);
         this.el.addEventListener('touchend', this.handleTouchEnd);
         
-        if (isMobileDevice()) {
-            // light1.setAttribute("position", "10 8 -20");
-            // light2.setAttribute("position", "-10 8 -20");
-            // light3.setAttribute("position", "0 -7 -7");
-            light1.setAttribute("position", "10 10 -23");
-            light2.setAttribute("position", "0 8 -21");
-            light3.setAttribute("position", "2 -7 -7");
+        // if (isMobileDevice()) {
+        //     // light1.setAttribute("position", "10 8 -20");
+        //     // light2.setAttribute("position", "-10 8 -20");
+        //     // light3.setAttribute("position", "0 -7 -7");
+        //     light1.setAttribute("position", "10 10 -23");
+        //     light2.setAttribute("position", "0 8 -21");
+        //     light3.setAttribute("position", "2 -7 -7");
 
 
-            model.setAttribute("position", "0.1 2.8 -23");
-            model2.setAttribute("position", "0 1 -10");
-            model3.setAttribute("position", "0 1 -10");
+        //     model.setAttribute("position", "0.1 2.8 -23");
+        //     model2.setAttribute("position", "0 1 -10");
+        //     model3.setAttribute("position", "0 1 -10");
 
-            model.setAttribute("rotation", "0 -25 0");
-            model2.setAttribute("rotation", "0 0 0");
-            model3.setAttribute("rotation", "0 0 0");
+        //     model.setAttribute("rotation", "0 -25 0");
+        //     model2.setAttribute("rotation", "0 0 0");
+        //     model3.setAttribute("rotation", "0 0 0");
 
-            model.setAttribute("scale", "1.2 1.2 1.2");
-        }
+        //     model.setAttribute("scale", "1.2 1.2 1.2");
+        // }
     },
 
     handleMouseMove: function (event) {
@@ -62,12 +65,12 @@ AFRAME.registerComponent("mouse-move", {
     },
 
     handleMouseUp: function (event) {
-        if (isMoved) {
-            model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
-            model3.setAttribute("visible", true);
-            model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
-            isMoved = false;
-        }
+        // if (isMoved) {
+        //     model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
+        //     model3.setAttribute("visible", true);
+        //     model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
+        //     isMoved = false;
+        // }
     },
 
     handleTouchMove: function (event) {
@@ -75,12 +78,12 @@ AFRAME.registerComponent("mouse-move", {
     },
 
     handleTouchEnd: function (event) {
-        if (isMoved) {
-            model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
-            model3.setAttribute("visible", true);
-            model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
-            isMoved = false;
-        }
+        // if (isMoved) {
+        //     model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
+        //     model3.setAttribute("visible", true);
+        //     model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
+        //     isMoved = false;
+        // }
     }
 });
 

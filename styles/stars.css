@@ -1,0 +1,464 @@
+/* shining stars */
+.stars-container {
+    height: 360px;
+    width: 100%;
+    position: absolute;
+    padding: 0 35px 0 27px;
+    top: 211px;
+    left: 0;
+}
+
+.stars {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #FFE69E;
+}
+
+@keyframes star {
+    0% {
+        opacity: 0.5;
+        box-shadow: 0px 0px 5px 2px rgba(255,230,158,0.45);
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0px 0px 5px 2px rgba(255,230,158,0.95);
+    }
+}
+
+.star1 {
+    top: 211px;
+    left: 1.5px;
+    width: 3.123px;
+    height: 3.123px;
+    animation: star 0.7s ease-out infinite alternate;
+}
+
+.star2 {
+    top: 305px;
+    left: 6px;
+    width: 4.1px;
+    height: 4.1px;
+    animation: star 0.6s 0.5s ease-out infinite alternate;
+}
+
+.star3 {
+    bottom: 2px;
+    left: 42px;
+    width: 1.98px;
+    height: 1.98px;
+    animation: star 0.6s 0.4s ease-out infinite alternate;
+}
+
+.star4 {
+    top: 208px;
+    left: 111px;
+    width: 2.02px;
+    height: 2.02px;
+    animation: star 0.73s 0.6s ease-out infinite alternate;
+}
+
+.star5 {
+    top: 293px;
+    left: 112px;
+    width: 2.11px;
+    height: 2.11px;
+    animation: star 0.63s 0.44s ease-out infinite alternate;
+}
+
+.star6 {
+    top: 335px;
+    left: 130px;
+    width: 2.91px;
+    height: 2.91px;
+    animation: star 0.69s 0.23s ease-out infinite alternate;
+}
+
+.star7 {
+    top: 241px;
+    left: 191px;
+    width: 1.7px;
+    height: 1.7px;
+    animation: star 0.59s 0.33s ease-out infinite alternate;
+}
+
+.star8 {
+    top: 336px;
+    left: 208px;
+    width: 1.86px;
+    height: 1.86px;
+    animation: star 0.44s 0.44s ease-out infinite alternate;
+}
+
+.star9 {
+    top: 78px;
+    left: 281px;
+    width: 3.78px;
+    height: 3.78px;
+    animation: star 0.74s 0.14s ease-out infinite alternate;
+}
+
+.star10 {
+    top: 187px;
+    left: 258px;
+    width: 2.2px;
+    height: 2.2px;
+    animation: star 0.39s 0.19s ease-out infinite alternate;
+}
+
+.star11 {
+    top: 293px;
+    left: 267px;
+    width: 3.178px;
+    height: 3.178px;
+    animation: star 0.79s 0.1s ease-out infinite alternate;
+}
+
+.star12 {
+    top: 2px;
+    left: 332px;
+    width: 2.988px;
+    height: 2.988px;
+    animation: star 0.69s 0.31s ease-out infinite alternate;
+}
+
+.star13 {
+    top: 81px;
+    left: 352px;
+    width: 3.08px;
+    height: 3.08px;
+    animation: star 0.645s 0.12s ease-out infinite alternate;
+}
+
+.star14 {
+    top: 223px;
+    left: 320px;
+    width: 1.831px;
+    height: 1.831px;
+    animation: star 0.455s 0.111s ease-out infinite alternate;
+}
+
+.star15 {
+    top: 313px;
+    left: 350px;
+    width: 1.99px;
+    height: 1.99px;
+    animation: star 0.415s 0.131s ease-out infinite alternate;
+}
+
+.star16 {
+    top: 126px;
+    left: 413px;
+    width: 3.204px;
+    height: 3.204px;
+    animation: star 0.605s 0.231s ease-out infinite alternate;
+}
+
+.star17 {
+    top: 213px;
+    left: 399px;
+    width: 1.677px;
+    height: 1.677px;
+    animation: star 0.505s 0.313s ease-out infinite alternate;
+}
+
+.star18 {
+    top: 308px;
+    left: 425px;
+    width: 1.77px;
+    height: 1.77px;
+    animation: star 0.595s 0.413s ease-out infinite alternate;
+}
+
+.star19 {
+    top: 343px;
+    left: 403px;
+    width: 1.95px;
+    height: 1.95px;
+    animation: star 0.555s 0.019s ease-out infinite alternate;
+}
+
+.star20 {
+    top: 209px;
+    left: 486px;
+    width: 2.125px;
+    height: 1.125px;
+    animation: star 0.625s 0.369s ease-out infinite alternate;
+}
+
+.star21 {
+    top: 270px;
+    left: 505px;
+    width: 3.425px;
+    height: 3.425px;
+    animation: star 0.711s 0.09s ease-out infinite alternate;
+}
+
+.star22 {
+    top: 339px;
+    left: 535px;
+    width: 1.425px;
+    height: 1.425px;
+    animation: star 0.311s 0.17s ease-out infinite alternate;
+}
+
+.star23 {
+    top: 178px;
+    left: 538px;
+    width: 1.925px;
+    height: 1.925px;
+    animation: star 0.511s 0.371s ease-out infinite alternate;
+}
+
+.star24 {
+    top: 269px;
+    left: 632px;
+    width: 1.825px;
+    height: 1.825px;
+    animation: star 0.536s 0.571s ease-out infinite alternate;
+}
+
+.star25 {
+    top: 316px;
+    left: 612px;
+    width: 1.785px;
+    height: 1.785px;
+    animation: star 0.366s 0.371s ease-out infinite alternate;
+}
+
+.star26 {
+    top: 352px;
+    left: 651px;
+    width: 1.881px;
+    height: 1.881px;
+    animation: star 0.386s 0.381s ease-out infinite alternate;
+}
+
+.star27 {
+    top: 342px;
+    left: 693px;
+    width: 2.882px;
+    height: 2.882px;
+    animation: star 0.586s 0.581s ease-out infinite alternate;
+}
+
+.star28 {
+    top: 52px;
+    left: 783px;
+    width: 1.722px;
+    height: 1.722px;
+    animation: star 0.321s 0.181s ease-out infinite alternate;
+}
+
+.star29 {
+    top: 130px;
+    left: 769px;
+    width: 1.422px;
+    height: 1.422px;
+    animation: star 0.286s 0.581s ease-out infinite alternate;
+}
+
+.star30 {
+    top: 260px;
+    left: 736px;
+    width: 1.572px;
+    height: 1.572px;
+    animation: star 0.336s 0.381s ease-out infinite alternate;
+}
+
+.star31 {
+    top: 335px;
+    left: 780px;
+    width: 1.772px;
+    height: 1.772px;
+    animation: star 0.636s 0.141s ease-out infinite alternate;
+}
+
+.star32 {
+    top: 107px;
+    left: 837px;
+    width: 2.072px;
+    height: 2.072px;
+    animation: star 0.482s 0.401s ease-out infinite alternate;
+}
+
+.star33 {
+    top: 206px;
+    left: 832px;
+    width: 2.572px;
+    height: 2.572px;
+    animation: star 0.502s 0.201s ease-out infinite alternate;
+}
+
+.star34 {
+    top: 283px;
+    left: 834px;
+    width: 1.273px;
+    height: 1.273px;
+    animation: star 0.41s 0.601s ease-out infinite alternate;
+}
+
+.star35 {
+    top: 335px;
+    left: 827px;
+    width: 1.973px;
+    height: 1.973px;
+    animation: star 0.699s 0.8s ease-out infinite alternate;
+}
+
+.star36 {
+    top: 249px;
+    left: 929px;
+    width: 1.803px;
+    height: 1.803px;
+    animation: star 0.72s 0.2s ease-out infinite alternate;
+}
+
+.star37 {
+    top: 324px;
+    left: 927px;
+    width: 1.363px;
+    height: 1.363px;
+    animation: star 0.528s 0s ease-out infinite alternate;
+}
+
+.star38 {
+    top: 214px;
+    left: 996px;
+    width: 2.363px;
+    height: 2.363px;
+    animation: star 0.728s 0s ease-out infinite alternate;
+}
+
+.star39 {
+    top: 305px;
+    left: 993px;
+    width: 1.663px;
+    height: 1.663px;
+    animation: star 0.444s 0s ease-out infinite alternate;
+}
+
+.star40 {
+    top: 164px;
+    left: 1081px;
+    width: 1.777px;
+    height: 1.777px;
+    animation: star 0.544s 0.2s ease-out infinite alternate;
+}
+
+.star41 {
+    top: 280px;
+    left: 1075px;
+    width: 1.827px;
+    height: 1.827px;
+    animation: star 0.744s 0.1s ease-out infinite alternate;
+}
+
+.star42 {
+    top: 324px;
+    left: 1083px;
+    width: 2.827px;
+    height: 2.827px;
+    animation: star 0.484s 0.122s ease-out infinite alternate;
+}
+
+.star43 {
+    top: 257px;
+    left: 1157px;
+    width: 1.837px;
+    height: 1.837px;
+    animation: star 0.486s 0.192s ease-out infinite alternate;
+}
+
+.star44 {
+    top: 118px;
+    right: 127px;
+    width: 1.757px;
+    height: 1.757px;
+    animation: star 0.566s 0.692s ease-out infinite alternate;
+}
+
+.star45 {
+    top: 203px;
+    right: 165px;
+    width: 1.957px;
+    height: 1.957px;
+    animation: star 0.661s 0.292s ease-out infinite alternate;
+}
+
+.star46 {
+    top: 257px;
+    right: 218px;
+    width: 2.157px;
+    height: 2.157px;
+    animation: star 0.361s 0.222s ease-out infinite alternate;
+}
+
+.star47 {
+    top: 301px;
+    right: 182px;
+    width: 2.107px;
+    height: 2.107px;
+    animation: star 0.464s 0.522s ease-out infinite alternate;
+}
+
+.star47 {
+    top: 357px;
+    right: 162px;
+    width: 2.147px;
+    height: 2.147px;
+    animation: star 0.667s 0.722s ease-out infinite alternate;
+}
+
+.star47 {
+    top: 79px;
+    right: 65px;
+    width: 3.147px;
+    height: 3.147px;
+    animation: star 0.77s 0.022s ease-out infinite alternate;
+}
+
+.star48 {
+    top: 191px;
+    right: 64px;
+    width: 2.647px;
+    height: 2.647px;
+    animation: star 0.47s 0s ease-out infinite alternate;
+}
+
+.star49 {
+    top: 244px;
+    right: 80px;
+    width: 2.247px;
+    height: 2.247px;
+    animation: star 0.67s 0s ease-out infinite alternate;
+}
+
+.star50 {
+    top: 340px;
+    right: 15px;
+    width: 4.247px;
+    height: 4.247px;
+    animation: star 0.87s 0.6s ease-out infinite alternate;
+}
+
+.star51 {
+    top: 267px;
+    right: 0.5px;
+    width: 3.247px;
+    height: 3.247px;
+    animation: star 0.47s 0.34s ease-out infinite alternate;
+}
+
+.star52 {
+    top: 331px;
+    right: 26px;
+    width: 1.247px;
+    height: 1.247px;
+    animation: star 0.471s 0.324s ease-out infinite alternate;
+}
