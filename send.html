@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Example</title>
+</head>
+<body>
+
+<h1>Data Submission Form</h1>
+
+<div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+</div>
+
+<div>
+    <label for="text">Text:</label>
+    <textarea id="text" rows="4" required></textarea>
+</div>
+
+<button onclick="submitData()">Submit Data</button>
+
+<h2>Submitted Data:</h2>
+<ul id="submittedData"></ul>
+
+<script>
+function submitData() {
+    const email = document.getElementById('email').value;
+    const text = document.getElementById('text').value;
+
+    // Проверка, что email и text не пустые
+    if (email.trim() === '' || text.trim() === '') {
+        alert('Please enter both email and text.');
+        return;
+    }
+
+    // Отправка данных на сервер
+    fetch('http://localhost:8000', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, text }),
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+        // Опционально: обновить данные на странице после успешной отправки
+        updateDataOnPage();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while submitting data.');
+    });
+}
+
+function updateDataOnPage() {
+    fetch('http://localhost:8000')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json(); // Используем response.text() вместо response.json()
+        })
+        .then(data => {
+            console.log('Received data:', data); // Выводим данные в консоль
+
+            try {
+                const parsedData = JSON.parse(data);
+                // Продолжаем обработку данных, теперь в формате JSON
+                const submittedDataList = document.getElementById('submittedData');
+                submittedDataList.innerHTML = '';
+                parsedData.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Email: ${item.Email || 'N/A'}, Text: ${item.Text || 'N/A'}`;
+                    submittedDataList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Error parsing JSON:', error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+
+// Вызываем функцию загрузки данных при загрузке страницы
+updateDataOnPage();
+</script>
+
+</body>
+</html>

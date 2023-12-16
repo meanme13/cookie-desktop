@@ -1,0 +1,325 @@
+.congrats {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 32px;
+    margin-left: 64px;
+    z-index: 100;
+}
+
+.logo {
+    position: absolute;
+    top: 32px;
+    left: 64px;
+    width: 122px;
+    height: 39px;
+    z-index: 300;
+}
+
+.congrats-text {
+    margin-top: 272px;
+}
+
+.congrats-text-h1 {
+    margin: 0;
+    padding: 0;
+    color: #EEE1D3;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.congrats-text-p{
+    margin: 64px 0 0 0;
+    padding: 0;
+    color: #EEE1D3;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 680px;
+    height: 257px;
+}
+
+.congrats-text-p-mobile {
+    display: none;
+}
+
+.congrats-buttons {
+    margin: 64px 0 0 0;
+    padding: 0;
+    display: flex;
+}
+
+.show-cookie {
+    color: #000000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 57px;
+    background: #D4AB6E;
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+.show-ar {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    border: 1px solid #D4AB6E;
+    color: #D4AB6E;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    background: transparent;
+    cursor: pointer;
+}
+
+.cookieTip {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 61px;
+    color: #EEE1D3;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1440px) {
+    .congrats-text {
+        margin-top: 182px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        top: 32px;
+        left: 32px;
+    }
+
+    .congrats {
+        margin-top: 32px;
+        margin-left: 32px;
+    }
+
+    .congrats-text-h1 {
+        font-size: 28px;
+    }
+
+    .congrats-text {
+        margin-top: 105px;
+    }
+    
+    .congrats-text-p {
+        font-size: 18px;
+        width: 485px;
+        height: 265px;
+    }
+
+    .congrats-buttons {
+        flex-direction: column;
+    }
+
+    .show-cookie, .show-ar {
+        margin-right: 181px;
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    .cookieTip {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .congrats-text-h1 {
+        font-size: 28px;
+    }
+
+    .congrats-text {
+        margin-top: 233px;
+    }
+    
+    .congrats-text-p {
+        font-size: 18px;
+        width: 485px;
+        height: 265px;
+    }
+
+    .congrats-buttons {
+        flex-direction: column;
+    }
+
+    .show-cookie, .show-ar {
+        margin-right: 181px;
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 100px;
+        height: 32px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .congrats {
+        margin-top: 16px;
+        margin-left: 16px;
+        width: 398px;
+    }
+    
+    .congrats-text {
+        margin-top: 296px;
+    }
+
+    .congrats-text-h1 {
+        font-size: 28px;
+    }
+
+    .congrats-text-p {
+        margin: 32px 0 32px 0;
+        font-size: 18px;
+        width: 398px;
+    }
+
+    .congrats-buttons {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .show-cookie {
+        font-size: 18px;
+        align-self: stretch;
+        margin-right: 0;
+    }
+
+    .show-ar {
+        margin: 0;
+        font-size: 18px;
+        align-self: stretch;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .logo {
+        width: 91px;
+        height: 29px;
+    }
+
+    .congrats {
+        margin-top: 22px;
+        margin-left: 17px;
+        width: 343px;
+    }
+    
+    .congrats-text {
+        margin-top: 56px;
+    }
+
+    .congrats-text-h1 {
+        font-size: 24px;
+    }
+
+    .congrats-text-p {
+        margin: 32px 0 32px 0;
+        font-size: 18px;
+        width: 343px;
+        height: 315px;
+    }
+
+    .congrats-buttons {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .show-cookie {
+        font-size: 18px;
+        margin-right: 0;
+        padding: 12px 48px;
+    }
+
+    .show-ar {
+        margin: 0;
+        font-size: 18px;
+        padding: 12px 48px;
+    }
+
+    .cookieTip {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo {
+        width: 91px;
+        height: 29px;
+    }
+
+    .congrats {
+        margin-top: 16px;
+        margin-left: 16px;
+        width: 288px;
+        height: 274px;
+    }
+    
+    .congrats-text {
+        margin-top: 26px;
+    }
+
+    .congrats-text-h1 {
+        font-size: 24px;
+    }
+
+    .congrats-text-p {
+        margin: 12px 0 0 0;
+        font-size: 14px;
+        width: 288px;
+        height: 274px;
+    }
+
+    .congrats-buttons {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .show-cookie {
+        font-size: 16px;
+        margin-right: 0;
+        margin-bottom: 12px;
+        padding: 12px 48px;
+    }
+
+    .show-ar {
+        margin: 0;
+        font-size: 16px;
+        padding: 12px 48px;
+    }
+}

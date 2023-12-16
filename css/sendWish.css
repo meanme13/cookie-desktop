@@ -1,0 +1,73 @@
+.send-wish-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 36px;
+    margin-left: 80px;
+    z-index: 100;
+}
+
+.send-wish-h1 {
+    color: #EEE1D3;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    width: 496px;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.send-wish-p {
+    color: #EEE1D3;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 491px;
+    margin: 0 0 64px 0;
+}
+
+.mail, .wish-text {
+    width: 386px;
+    padding: 16px 24px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #8A7452;
+    background: transparent;
+    flex: 1 0 0;
+    color: #8A7452;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.wish-text {
+    display: flex;
+    width: 386px;
+    height: 137px;
+    padding: 16px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #8A7452;
+    background: transparent;
+    flex: 1 0 0;
+    color: #8A7452;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.mail::placeholder, .wish-text::placeholder {
+    color: #8A7452;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}

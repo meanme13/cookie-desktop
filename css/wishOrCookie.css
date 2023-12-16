@@ -1,0 +1,130 @@
+.wish-or-cookie {
+    display: none;
+    width: 100%;
+    height: 189px;
+    position: absolute;
+    bottom: 48px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.wish-or-cookie-p {
+    color: #EEE1D3;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 0 0 64px 0;
+    width: 760px;
+    height: 62px;
+}
+
+.wish-or-cookie-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 639px;
+}
+
+.send-wish {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    background: #D4AB6E;
+    color: #000000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    border: none;
+    cursor: pointer;
+}
+
+.new-cookie {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    border: 1px solid #D4AB6E;
+    color: #D4AB6E;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .wish-or-cookie {
+        bottom: 30px;
+    }
+
+    .wish-or-cookie-p {
+        font-size: 18px;
+        margin: 0 0 32px 0;
+        width: 485px;
+        height: 75px;
+    }
+
+    .send-wish, .new-cookie {
+        font-size: 18px;
+    }
+
+    .wish-or-cookie-buttons {
+        width: 485px;
+        height: 57px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .wish-or-cookie-p {
+        font-size: 18px;
+        margin: 0 0 24px 0;
+        width: 398px;
+        height: 75px;
+    }
+
+    .send-wish, .new-cookie {
+        padding: 12px 48px;
+    }
+
+    .new-cookie {
+        margin-top: 16px;
+    }
+
+    .wish-or-cookie-buttons {
+        width: 398px;
+        height: 114px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .wish-or-cookie-p {
+        font-size: 16px;
+        margin: 0 0 24px 0;
+        width: 343px;
+    }
+
+    .send-wish, .new-cookie {
+        padding: 10px 48px;
+    }
+
+    .new-cookie {
+        margin-top: 14px;
+    }
+
+    .wish-or-cookie-buttons {
+        width: 343px;
+        flex-direction: column;
+    }
+}
