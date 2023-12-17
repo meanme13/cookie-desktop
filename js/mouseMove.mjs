@@ -114,8 +114,15 @@ const mouseMove = () => ({
 
             setTimeout(() => {
                 const wishOrCookie = document.getElementById("wishOrCookie");
+                const newCookie = document.getElementById("newCookie");
+
                 wishOrCookie.style.display = 'flex';
                 wishOrCookie.classList.add("fadeIn");
+
+                newCookie.addEventListener("click", () => {
+                    localStorage.setItem('newCookie', 'true');
+                    location.reload();
+                });
             }, 3000);
         }
     },
