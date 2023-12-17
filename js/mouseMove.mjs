@@ -1,4 +1,5 @@
 var isMoved = false;
+var isAbleToCut = false;
 function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 }
@@ -27,12 +28,12 @@ const mouseMove = () => ({
 
                 showCookie.addEventListener('click', () => {
                     const congrats = document.getElementById("congrats");
-                    model.setAttribute("animation-mixer", "clip: clip1; loop: once; clampWhenFinished: true; timeScale: 1");
+                    model.setAttribute("animation-mixer", "clip: clip1; loop: once; clampWhenFinished: true; timeScale: 0.8");
                     congrats.classList.add("fadeOut");
                     setTimeout(() => {congrats.style.display = 'none'}, 300);
                     
                     model2.setAttribute("fade-in", "");
-                    setTimeout(() => {model2.setAttribute("visible", true);}, 1000);
+                    setTimeout(() => {model2.setAttribute("visible", true); isAbleToCut = true }, 1000);
 
                     setTimeout(() => {
                         cookieTip.style.display = 'block';
@@ -72,7 +73,7 @@ const mouseMove = () => ({
     },
 
     handleMouseUp: function (event) {
-        if (isMoved) {
+        if (isMoved && isAbleToCut) {
             model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
             model3.setAttribute("visible", true);
             model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
@@ -95,7 +96,7 @@ const mouseMove = () => ({
     },
 
     handleTouchEnd: function (event) {
-        if (isMoved) {
+        if (isMoved && isAbleToCut) {
             model2.setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
             model3.setAttribute("visible", true);
             model3.setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
