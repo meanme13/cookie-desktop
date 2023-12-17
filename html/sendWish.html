@@ -1,4 +1,4 @@
-<div id="sendWish" class="send-wish-container">
+<div id="sendWishContainer" class="send-wish-container">
     
     <h1 class="send-wish-h1">Отправьте письмо в будущее</h1>
     
@@ -12,14 +12,15 @@
     </p>
 
     <input type="email" id="mail" class="mail" placeholder="Электронная почта">
-    <input type="text" id="wishText" class="wish-text" placeholder="Ваше письмо" height="137">
+    <!-- <input type="text" id="wishText" class="wish-text" placeholder="Ваше письмо"> -->
+    <textarea type="text" id="wishText" class="wish-text" placeholder="Ваше письмо"></textarea>
 
     <button id="confirmWish" class="confirm-wish">Отправить</button>
 
     <div id="checkContainer" class="check-container">
         <input type="checkbox" id="check">
-        <p class="checkRules check-rules">
-            Отправляя письмо, вы даете согласие на обработку персональных данных
+        <p id="checkRules"  class="check-rules">
+            Отправляя письмо, вы даете согласие на обработку <span class="check-underline">персональных данных</span>
         </p>
     </div>
 </div>

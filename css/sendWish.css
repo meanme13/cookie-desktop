@@ -1,10 +1,11 @@
 .send-wish-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: fixed;
-    margin-top: 36px;
+    margin-top: 277px;
     margin-left: 80px;
     z-index: 100;
+    width: 680px;
 }
 
 .send-wish-h1 {
@@ -13,9 +14,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    width: 496px;
+    width: 680px;
     padding: 0;
-    margin: 0 0 32px 0;
+    margin: 0;
 }
 
 .send-wish-p {
@@ -24,12 +25,11 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    width: 491px;
-    margin: 0 0 64px 0;
+    width: 680px;
+    margin: 32px 0 0 0;
 }
 
-.mail, .wish-text {
-    width: 386px;
+.mail {
     padding: 16px 24px;
     align-items: center;
     gap: 10px;
@@ -42,26 +42,24 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    margin-bottom: 16px;
+    margin-top: 32px;
 }
 
 .wish-text {
     display: flex;
-    width: 386px;
-    height: 137px;
     padding: 16px 24px;
     align-items: flex-start;
     gap: 10px;
     border-radius: 4px;
     border: 1px solid #8A7452;
     background: transparent;
-    flex: 1 0 0;
     color: #8A7452;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%;
-    margin-bottom: 16px;
+    resize: none;
+    height: 137px;
+    margin-top: 16px;
 }
 
 .mail::placeholder, .wish-text::placeholder {
@@ -70,4 +68,235 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+}
+
+.confirm-wish {
+    border: none;
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    background: #D4AB6E;
+    color: #000000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 201px;
+    margin-top: 32px;
+}
+
+.check-container {
+    display: flex;
+    align-items: baseline;
+    margin-top: 24px;
+}
+
+.check-rules {
+    color: #8A7452;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0 0 0 8px;
+}
+
+.check-underline {
+    color: #8A7452;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 14px; 
+    height: 14px;
+    border: 1px solid #8A7452;
+    border-radius: 2px;
+    background-color: transparent;
+    outline: none; 
+    display: grid;
+    place-content: center;
+    
+}
+
+input[type="checkbox"]:checked {
+    border-color: #8A7452; 
+}
+
+input[type="checkbox"]:hover {
+    border-color: #8A7452;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: #8A7452;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(0.8);
+}
+
+@media screen and (max-width: 1440px) {
+    .send-wish-container {
+        margin-top: 172px;
+        width: 626px;
+        height: 585px;
+    }
+
+    .confirm-wish {
+        padding: 14px 48px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .send-wish-container {
+        margin-top: 143px;
+        width: 480px;
+        height: 555px;
+    }
+
+    .send-wish-h1 {
+        font-size: 28px;
+    }
+    
+    .send-wish-p {
+        font-size: 18px;
+    }
+
+    .check-rules {
+        font-size: 14px;
+    }
+    
+    .check-underline {
+        font-size: 14px;
+    }
+
+    .confirm-wish {
+        font-size: 18px;
+        width: 182px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .send-wish-container {
+        margin-top: 271px;
+        width: 480px;
+        height: 555px;
+    }
+
+    .send-wish-h1 {
+        font-size: 28px;
+        width: 480px;
+    }
+    
+    .send-wish-p {
+        font-size: 18px;
+        width: 480px;
+    }
+
+    .check-rules {
+        font-size: 14px;
+    }
+    
+    .check-underline {
+        font-size: 14px;
+    }
+
+    .confirm-wish {
+        font-size: 18px;
+        width: 182px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .send-wish-container {
+        margin-top: 336px;
+        margin-left: 16px;
+        width: 398px;
+        height: 572px;
+    }
+
+    .send-wish-h1 {
+        font-size: 28px;
+        width: 398px;
+    }
+    
+    .send-wish-p {
+        font-size: 18px;
+        width: 398px;
+    }
+
+    .check-rules {
+        font-size: 14px;
+    }
+    
+    .check-underline {
+        font-size: 14px;
+    }
+
+    .confirm-wish {
+        font-size: 18px;
+        width: 182px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .send-wish-container {
+        margin-top: 153px;
+        margin-left: 16px;
+        width: 343px;
+        height: 490px;
+    }
+
+    .send-wish-h1 {
+        font-size: 28px;
+        width: 343px;
+    }
+    
+    .send-wish-p {
+        font-size: 16px;
+        width: 343px;
+        margin-top: 20px;
+    }
+
+    .check-rules {
+        font-size: 14px;
+    }
+    
+    .check-underline {
+        font-size: 14px;
+    }
+
+    .confirm-wish {
+        font-size: 18px;
+        width: 343px;
+        margin-top: 24px;
+        padding: 12px 48px;
+    }
+
+    .mail {
+        margin-top: 24px;
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+
+    .wish-text {
+        margin-top: 12px;
+        font-size: 16px;
+        padding: 14px 16px;
+    }
 }

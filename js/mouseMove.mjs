@@ -22,9 +22,27 @@ const mouseMove = () => ({
         if (model) {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
+                preloader.style.display = 'none';
+            }, 4000 );
+
+            setTimeout(() => {
                 const showCookie = document.getElementById("showCookie");
                 const cookieTip = document.getElementById("cookieTip");
-                preloader.style.display = 'none';
+                const sendWish = document.getElementById("sendWish");
+                const sendWishContainer = document.getElementById("sendWishContainer");
+                const wishOrCookie = document.getElementById("wishOrCookie");
+                const buttonClicked = localStorage.getItem('newCookie');
+
+                if (buttonClicked) {
+                    document.getElementById("congrats").style.display = 'none';
+                    model2.setAttribute("fade-in", "");
+                    setTimeout(() => {model2.setAttribute("visible", true); isAbleToCut = true }, 1000);
+
+                    setTimeout(() => {
+                        cookieTip.style.display = 'block';
+                        cookieTip.classList.add("fadeIn");
+                    }, 2000);
+                }
 
                 showCookie.addEventListener('click', () => {
                     const congrats = document.getElementById("congrats");
@@ -40,7 +58,18 @@ const mouseMove = () => ({
                         cookieTip.classList.add("fadeIn");
                     }, 5000);
                 });
-            }, 2000);
+
+                sendWish.addEventListener('click', () => {
+                    wishOrCookie.classList.add("fadeOut");
+                    setTimeout(() => {
+                        wishOrCookie.style.display = 'none';
+                        sendWishContainer.style.display = 'flex';
+                        sendWishContainer.classList.add("fadeIn");
+                        model2.setAttribute("visible", false);
+                        model3.setAttribute("visible", false);
+                    }, 300);
+                });
+            }, 3000);
         }
 
         this.el.addEventListener('mousemove', this.handleMouseMove);
@@ -108,8 +137,15 @@ const mouseMove = () => ({
 
             setTimeout(() => {
                 const wishOrCookie = document.getElementById("wishOrCookie");
+                const newCookie = document.getElementById("newCookie");
+
                 wishOrCookie.style.display = 'flex';
                 wishOrCookie.classList.add("fadeIn");
+
+                newCookie.addEventListener("click", () => {
+                    localStorage.setItem('newCookie', 'true');
+                    location.reload();
+                });
             }, 3000);
         }
     }
