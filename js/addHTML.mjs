@@ -8,18 +8,18 @@ fetch("./html/preloader.html")
     .then(response => response.text())
     .then(html => body.insertAdjacentHTML('afterbegin', html));
 
-fetch("./html/congrats.html")
-    .then(response => response.text())
-    .then(html => body.insertAdjacentHTML('afterbegin', html));
-
-fetch("./html/qr.html")
-    .then(response => response.text())
-    .then(html => body.insertAdjacentHTML('afterbegin', html));
-
-fetch("./html/wishOrCookie.html")
-    .then(response => response.text())
-    .then(html => body.insertAdjacentHTML('afterbegin', html));
-
-// fetch("./html/sendWish.html")
+// fetch("./html/congrats.html")
 //     .then(response => response.text())
 //     .then(html => body.insertAdjacentHTML('afterbegin', html));
+
+// fetch("./html/qr.html")
+//     .then(response => response.text())
+//     .then(html => body.insertAdjacentHTML('afterbegin', html));
+
+// fetch("./html/wishOrCookie.html")
+//     .then(response => response.text())
+//     .then(html => body.insertAdjacentHTML('afterbegin', html));
+
+fetch("./html/sendWish.html")
+    .then(response => response.text())
+    .then(html => body.insertAdjacentHTML('afterbegin', html));
