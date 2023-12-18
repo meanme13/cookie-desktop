@@ -3,6 +3,7 @@
 @import url('./qr.css');
 @import url('./wishOrCookie.css');
 @import url('./sendWish.css');
+@import url('./success.css');
 
 .a-enter-vr-button {
     display: none;

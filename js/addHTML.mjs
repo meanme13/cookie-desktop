@@ -23,3 +23,7 @@ fetch("./html/wishOrCookie.html")
 fetch("./html/sendWish.html")
     .then(response => response.text())
     .then(html => body.insertAdjacentHTML('afterbegin', html));
+
+fetch("./html/success.html")
+    .then(response => response.text())
+    .then(html => body.insertAdjacentHTML('afterbegin', html));

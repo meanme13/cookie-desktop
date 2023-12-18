@@ -37,12 +37,13 @@
     border: 1px solid #8A7452;
     background: transparent;
     flex: 1 0 0;
-    color: #8A7452;
+    color: #D8C5B1;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
     margin-top: 32px;
+    transition: .3s;
 }
 
 .wish-text {
@@ -53,13 +54,25 @@
     border-radius: 4px;
     border: 1px solid #8A7452;
     background: transparent;
-    color: #8A7452;
+    color: #D8C5B1;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     resize: none;
     height: 137px;
     margin-top: 16px;
+    transition: .3s;
+}
+
+
+.input-err {
+    border-radius: 4px;
+    border: 1px solid #CC1919;
+}
+
+.wish-text:hover, .mail:hover {
+    border-radius: 4px;
+    border: 1px solid #EEE1D3;
 }
 
 .mail::placeholder, .wish-text::placeholder {
@@ -68,9 +81,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    transition: .35s;
 }
 
-.confirm-wish {
+.mail:hover::placeholder, .wish-text:hover::placeholder {
+    color: #EEE1D3;
+}
+
+.confirm-wish:enabled, .confirm-wish:disabled {
     border: none;
     display: flex;
     padding: 16px 48px;
@@ -86,6 +104,11 @@
     line-height: 140%;
     width: 201px;
     margin-top: 32px;
+    transition: .3s;
+}
+
+.confirm-wish:disabled {
+    background: #8A7452;
 }
 
 .check-container {
@@ -125,15 +148,11 @@ input[type="checkbox"] {
     outline: none; 
     display: grid;
     place-content: center;
-    
+    cursor: pointer;
 }
 
 input[type="checkbox"]:checked {
     border-color: #8A7452; 
-}
-
-input[type="checkbox"]:hover {
-    border-color: #8A7452;
 }
 
 input[type="checkbox"]::before {
@@ -141,12 +160,16 @@ input[type="checkbox"]::before {
     width: 0.65em;
     height: 0.65em;
     transform: scale(0);
-    transition: 120ms transform ease-in-out;
+    transition: .1s transform ease-in-out;
     background-color: #8A7452;
     clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 input[type="checkbox"]:checked::before {
+    transform: scale(0.8);
+}
+
+input[type="checkbox"]:hover::before {
     transform: scale(0.8);
 }
 

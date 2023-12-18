@@ -15,12 +15,13 @@
     <a-scene 
         vr-mode-ui="enabled: false" 
         mouse-move 
+        scene-loaded
         resize-models 
         style="width: 100%; height: 100%; background: transparent;"
     >
 
         <a-assets>
-            <a-asset-item id="animatedModel" src="assets/models/gold.glb"></a-asset-item>
+            <a-asset-item id="animatedModel" src="assets/models/gold1.glb"></a-asset-item>
             <a-asset-item id="animatedModel2" src="assets/models/cocky.glb"></a-asset-item>
         </a-assets>
 
@@ -107,6 +108,7 @@
             position="0 0 -3"
             rotation="0 0 0"
             visible="false"
+            gltf-model="assets/models/с.glb"
             shadow="receive: true; cast: true"
             cube-env-map="path: cubeMap/;
                  extension: hdr;

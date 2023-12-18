@@ -1,0 +1,44 @@
+.success {
+    position: absolute;
+    top: 458px;
+    right: 64px;
+    width: 680px;
+    height: 269px;
+    z-index: 100;
+    display: none;
+}
+
+.success-h1 {
+    color: #EEE1D3;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.success-p {
+    color: #EEE1D3;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 32px;
+}
+
+.again-cookie {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    background: #D4AB6E;
+    color: #000000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 64px;
+    border: none;
+    cursor: pointer;
+}
