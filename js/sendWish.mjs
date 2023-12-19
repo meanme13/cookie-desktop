@@ -1,3 +1,6 @@
+import { navToSuccess } from "./succOrErr.mjs";
+import { throwError } from "./succOrErr.mjs";
+
 function submitData() {
     const emailValue = document.getElementById('mail').value;
     const textValue = document.getElementById('wishText').value;
@@ -16,7 +19,7 @@ function submitData() {
         return;
     }
 
-    fetch('http://localhost:8000', {
+    fetch('#', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -25,10 +28,10 @@ function submitData() {
     })
     .then(response => response.text())
     .then(data => {
-        
+        navToSuccess();
     })
     .catch(error => {
-        
+        throwError();
     });
 }
 

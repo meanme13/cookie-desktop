@@ -5,7 +5,9 @@
     width: 680px;
     height: 269px;
     z-index: 100;
+    display: block;
     display: none;
+    flex-direction: column;
 }
 
 .success-h1 {
@@ -14,6 +16,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+    margin: 0;
 }
 
 .success-p {
@@ -22,7 +25,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin-top: 32px;
+    margin: 32px 0 0 0;
 }
 
 .again-cookie {
@@ -41,4 +44,100 @@
     margin-top: 64px;
     border: none;
     cursor: pointer;
+    width: 284px;
+}
+
+@media screen and (max-width: 1440px) {
+    .success {
+        top: 368px;
+        right: 64px;
+        width: 656px;
+        height: 269px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .success {
+        top: 325px;
+        right: 32px;
+        width: 480px;
+        height: 191px;
+    }
+
+    .success-h1 {
+        font-size: 28px;
+    }
+    
+    .success-p {
+        font-size: 18px;
+        margin-top: 24px;
+    }
+    
+    .again-cookie {
+        font-size: 18px;
+        margin-top: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .success {
+        top: 200px;
+        right: 144px;
+        width: 480px;
+        height: 191px;
+        align-items: center;
+    }
+
+    .success-h1 {
+        font-size: 28px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .success-p {
+        font-size: 18px;
+        margin-top: 24px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .again-cookie {
+        font-size: 18px;
+        margin-top: 32px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .success {
+        top: 112px;
+        right: 16px;
+        width: 398px;
+        height: 191px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .success {
+        top: 112px;
+        right: 16px;
+        width: 343px;
+        height: 156px;
+        align-items: center;
+    }
+    
+    .success-p {
+        font-size: 16px;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .again-cookie {
+        padding: 12px 48px;
+        font-size: 16px;
+        margin-top: 24px;
+        width: 343px;
+    }
 }

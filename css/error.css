@@ -1,0 +1,140 @@
+.error-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    background: rgba(33, 33, 33, 0.60);
+    backdrop-filter: blur(6.5px);
+}
+
+.error-container {
+    width: 560px;
+    height: 332px;
+    background: radial-gradient(circle at bottom, #242A2E, #181A1D);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+.error-text-container {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-h1 {
+    color: #EEE1D3;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    margin: 0;
+}
+
+.error-p {
+    color: #EEE1D3;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 20px 0 0 0;
+}
+
+.error-button {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 57px;
+    background: #D4AB6E;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 40px 0 0 0;
+}
+
+.error-container-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .error-container {
+        width: 480px;
+        height: 293px;
+    }
+
+    .error-h1 {
+        font-size: 28px;
+    }
+
+    .error-p {
+        font-size: 18px;
+    }
+
+    .error-button {
+        font-size: 18px;
+        margin: 32px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .error-container {
+        width: 398px;
+        height: 293px;
+    }
+
+    .error-h1 {
+        font-size: 24px;
+    }
+
+    .error-p {
+        font-size: 16px;
+    }
+
+    .error-button {
+        font-size: 16px;
+        margin: 32px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .error-container {
+        width: 343px;
+        height: 293px;
+    }
+
+    .error-h1 {
+        font-size: 24px;
+    }
+
+    .error-p {
+        font-size: 16px;
+    }
+
+    .error-button {
+        font-size: 16px;
+        margin: 24px 0 0 0;
+        width: 100%;
+        padding: 12px 48px;
+    }
+}

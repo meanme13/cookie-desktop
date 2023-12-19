@@ -4,8 +4,11 @@ export function action() {
     document.getElementById("model3").setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
 
     const cookieTip = document.getElementById("cookieTip");
+    const katana = document.getElementById("imageContainer");
+    
     cookieTip.classList.add("fadeOut");
-    setTimeout(() => { cookieTip.style.display = 'none' }, 300);
+    katana.classList.add("fadeOut");
+    setTimeout(() => { cookieTip.style.display = 'none'; katana.style.display = 'none'; }, 300);
 
     setTimeout(() => {
         const wishOrCookie = document.getElementById("wishOrCookie");

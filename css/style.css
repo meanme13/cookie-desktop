@@ -4,6 +4,7 @@
 @import url('./wishOrCookie.css');
 @import url('./sendWish.css');
 @import url('./success.css');
+@import url('./error.css');
 
 .a-enter-vr-button {
     display: none;
@@ -13,4 +14,36 @@ body {
     font-family: 'Circe', sans-serif;
     width: 100%;
     height: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        scale: 0;
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        scale: 0;
+    }
+}
+  
+.fadeIn {
+    animation: fadeIn 0.3s;
+}
+
+.fadeOut {
+    animation: fadeOut 0.3s;
 }

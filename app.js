@@ -5,6 +5,7 @@ import { resizeModels } from './js/resizeModels.mjs';
 import { sceneLoaded } from './js/sceneLoaded.mjs';
 import './js/addHTML.mjs';
 import './js/showQR.mjs';
+import './js/succOrErr.mjs';
 
 AFRAME.registerComponent("mouse-move", mouseMove());
 AFRAME.registerComponent('fade-in', fadeIn());

@@ -27,3 +27,7 @@ fetch("./html/sendWish.html")
 fetch("./html/success.html")
     .then(response => response.text())
     .then(html => body.insertAdjacentHTML('afterbegin', html));
+
+fetch("./html/error.html")
+    .then(response => response.text())
+    .then(html => body.insertAdjacentHTML('afterbegin', html));
