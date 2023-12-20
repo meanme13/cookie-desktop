@@ -1,9 +1,9 @@
 .success {
     position: absolute;
-    top: 458px;
-    right: 64px;
-    width: 680px;
-    height: 269px;
+    top: 24.63rem;
+    left: 4rem;
+    width: 42.5rem;
+    height: 16.8rem;
     z-index: 100;
     display: block;
     display: none;
@@ -12,7 +12,7 @@
 
 .success-h1 {
     color: #EEE1D3;
-    font-size: 48px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -21,99 +21,111 @@
 
 .success-p {
     color: #EEE1D3;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin: 32px 0 0 0;
+    margin: 2rem 0 0 0;
 }
 
 .again-cookie {
     display: flex;
-    padding: 16px 48px;
+    padding: 1rem 3rem;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 57px;
+    border-radius: 3.56rem;
     background: #D4AB6E;
     color: #000000;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin-top: 64px;
+    margin-top: 4rem;
     border: none;
     cursor: pointer;
-    width: 284px;
+    width: 17.75rem;
 }
 
 @media screen and (max-width: 1440px) {
     .success {
         top: 368px;
-        right: 64px;
+        left: 64px;
         width: 656px;
         height: 269px;
+    }
+
+    .success-h1 {
+        font-size: 1.75rem;
+    }
+    
+    .success-p {
+        font-size: 1.375rem;
+        margin-top: 2rem;
+    }
+    
+    .again-cookie {
+        font-size: 1.125rem;
+        margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .success {
-        top: 325px;
-        right: 32px;
-        width: 480px;
-        height: 191px;
+        top: 17rem;
+        left: 2rem;
+        width: 30rem;
+        height: 12rem;
     }
 
     .success-h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
     
     .success-p {
-        font-size: 18px;
-        margin-top: 24px;
+        font-size: 1.375rem;
+        margin-top: 1.5rem;
     }
     
     .again-cookie {
-        font-size: 18px;
-        margin-top: 32px;
+        font-size: 1.125rem;
+        margin-top: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .success {
-        top: 200px;
-        right: 144px;
-        width: 480px;
-        height: 191px;
+        top: 10rem;
+        left: 9rem;
+        width: 30rem;
+        height: 12rem;
         align-items: center;
     }
 
     .success-h1 {
-        font-size: 28px;
+        font-size: 1.75rem;
         width: 100%;
         text-align: center;
     }
     
     .success-p {
-        font-size: 18px;
-        margin-top: 24px;
+        font-size: 1.125rem;
+        margin-top: 1.5rem;
         width: 100%;
         text-align: center;
     }
     
     .again-cookie {
-        font-size: 18px;
-        margin-top: 32px;
-        width: 250px;
+        font-size: 1.125rem;
+        margin-top: 2rem;
+        width: 15.62rem;
     }
 }
 
 @media screen and (max-width: 430px) {
     .success {
-        top: 112px;
-        right: 16px;
-        width: 398px;
-        height: 191px;
+        top: 5.75rem;
+        left: 1rem;
+        width: 95%;
         align-items: center;
     }
 }
@@ -121,23 +133,23 @@
 @media screen and (max-width: 375px) {
     .success {
         top: 112px;
-        right: 16px;
+        left: 16px;
         width: 343px;
         height: 156px;
         align-items: center;
     }
     
     .success-p {
-        font-size: 16px;
-        margin-top: 20px;
-        width: 100%;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        width: 95%;
         text-align: center;
     }
     
     .again-cookie {
-        padding: 12px 48px;
-        font-size: 16px;
-        margin-top: 24px;
-        width: 343px;
+        padding: 0.75rem 3rem;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        width: 95%;
     }
 }

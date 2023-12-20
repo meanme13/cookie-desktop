@@ -4,7 +4,7 @@ export function action() {
     document.getElementById("model3").setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");
 
     const cookieTip = document.getElementById("cookieTip");
-    const katana = document.getElementById("imageContainer");
+    const katana = document.getElementById("katana");
     
     cookieTip.classList.add("fadeOut");
     katana.classList.add("fadeOut");

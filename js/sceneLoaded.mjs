@@ -3,19 +3,12 @@ import { getDragonAnimation } from "./resizeModels.mjs";
 
 var isAbleToCut = false;
 
-function moveDragon(isPosition, isRotation, num) {
+function moveDragon() {
     const dragonContainer = document.getElementById('dragonContainer');
-    const anim = getDragonAnimation();
+    const { to } = getDragonAnimation();
 
-    if (isPosition) {
-        dragonContainer.setAttribute('animation', 
-            `property: position; to: ${anim[num].to}; dur: 2000; easing: linear; delay: 0; loop: 1`);
-    }
-
-    if (isRotation) {
-        dragonContainer.setAttribute('animation__2', 
-            `property: rotation; to: ${anim[num].rotation}; dur: 2000; easing: linear; delay: 0; loop: 1`);
-    }
+    dragonContainer.setAttribute('animation', 
+        `property: position; to: ${to}; dur: 2000; easing: linear; delay: 0; loop: 1`);
 }
 
 const sceneLoaded = () => ({
@@ -23,7 +16,7 @@ const sceneLoaded = () => ({
         var model = document.getElementById('model');
         var model2 = document.getElementById('model2');
         var model3 = document.getElementById('model3');
-        // model3.setAttribute("gltf-model", `assets/models/p${ Math.floor(Math.random() * 10) + 1 }.glb`);
+        model3.setAttribute("gltf-model", `assets/models/p${ Math.floor(Math.random() * 25) + 1 }.glb`);
 
         if (model) {
             setTimeout(() => {
@@ -42,7 +35,8 @@ const sceneLoaded = () => ({
                 const check = document.getElementById("check");
                 const confirmWish = document.getElementById("confirmWish");
                 const againCookie = document.getElementById("againCookie");
-                const katana = document.getElementById("imageContainer");
+                const katana = document.getElementById("katana");
+                const width = window.screen.width;
 
                 againCookie.addEventListener('click', () => {
                     localStorage.setItem('newCookie', true);
@@ -55,7 +49,6 @@ const sceneLoaded = () => ({
 
                 confirmWish.addEventListener('click', () => {
                     submitData();
-                    moveDragon(true, true, 3);
                 });
 
                 logo.addEventListener('click', () => {
@@ -64,7 +57,7 @@ const sceneLoaded = () => ({
                 });
 
                 if (buttonClicked) {
-                    moveDragon(true, false, 1);
+                    moveDragon();
                     document.getElementById("congrats").style.display = 'none';
                     model2.setAttribute("fade-in", "");
                     setTimeout(() => {model2.setAttribute("visible", true); isAbleToCut = true }, 1000);
@@ -79,10 +72,10 @@ const sceneLoaded = () => ({
                 }
 
                 showCookie.addEventListener('click', () => {
-                    setTimeout(() => { moveDragon(true, false, 1);}, 4000);
+                    setTimeout(() => { moveDragon();}, 4000);
 
                     const congrats = document.getElementById("congrats");
-                    model.setAttribute("animation-mixer", "clip: clip1; loop: once; clampWhenFinished: true; timeScale: 0.8");
+                    model.setAttribute("animation-mixer", "clip: clip1; loop: once; clampWhenFinished: true; timeScale: 0.7");
                     congrats.classList.add("fadeOut");
                     setTimeout(() => {congrats.style.display = 'none'}, 300);
 
@@ -90,16 +83,21 @@ const sceneLoaded = () => ({
                     setTimeout(() => {
                         model2.setAttribute("visible", true); 
                         isAbleToCut = true;
-                    }, 1000);
-                    
-                    setTimeout(() => {
-                        katana.style.display = 'block';
-                        katana.classList.add("fadeIn");
-                    }, 2500);
+                    }, 1200);
 
                     setTimeout(() => {
                         cookieTip.style.display = 'block';
                         cookieTip.classList.add("fadeIn");
+
+                        if (width >= 1024) {
+                            katana.style.display = 'block';
+                            katana.classList.add("fadeIn");
+
+                            document.addEventListener("mousemove", function (e) {
+                                katana.style.left = e.pageX - katana.width / -10 + "px";
+                                katana.style.top = e.pageY - katana.height / 2+ "px";
+                            });
+                        }
                     }, 5000);
                 });
 
@@ -112,7 +110,6 @@ const sceneLoaded = () => ({
                         model2.setAttribute("visible", false);
                         model3.setAttribute("visible", false);
                         isAbleToCut = false;
-                        moveDragon(true, true, 2);
                     }, 300);
                 });
             }, 3000);
