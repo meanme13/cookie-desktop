@@ -62,8 +62,15 @@ const sceneLoaded = () => ({
                     model2.setAttribute("fade-in", "");
                     setTimeout(() => {model2.setAttribute("visible", true); isAbleToCut = true }, 1000);
                     setTimeout(() => {
-                        katana.style.display = 'block';
-                        katana.classList.add("fadeIn");
+                        if (width >= 1024) {
+                            katana.style.display = 'block';
+                            katana.classList.add("fadeIn");
+
+                            document.addEventListener("mousemove", function (e) {
+                                katana.style.left = e.pageX - katana.width / -10 + "px";
+                                katana.style.top = e.pageY - katana.height / 2+ "px";
+                            });
+                        }
                     }, 1500);
                     setTimeout(() => {
                         cookieTip.style.display = 'block';
