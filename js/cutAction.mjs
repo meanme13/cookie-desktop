@@ -21,5 +21,5 @@ export function action() {
             localStorage.setItem('newCookie', 'true');
             location.reload();
         });
-    }, 3000);
+    }, 300);
 }

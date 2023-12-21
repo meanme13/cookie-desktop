@@ -25,7 +25,7 @@ const sceneLoaded = () => ({
             }, 4000 );
 
             setTimeout(() => {
-                const success = document.getElementById("success");
+                const success = document.getElementById("successText");
                 const congrats = document.getElementById("congratsContainer");
                 const sendWishText = document.getElementById("sendWishText");
                 const showCookie = document.getElementById("showCookie");

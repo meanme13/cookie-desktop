@@ -18,8 +18,8 @@ function getCookiePosition() {
         return { pos: "0 0 -3" };
     } else if (width <= 430 && width > 375) {
 
-        return { pos: "0 2 -4" };
-    } else if (width <= 375) {
+        return { pos: "0 1 -4" };
+    } else if (width <= 375 && width > 320) {
 
         return { pos: "0 2 -4" };
     } else return { pos: "0 0 -3" };
@@ -46,7 +46,7 @@ function getDragonPosition() {
     } else if (width <= 430 && width > 375) {
 
         return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
-    } else if (width <= 375) {
+    } else if (width <= 375 && width > 320) {
 
         return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
     } else return { from: "0 0 0", to: "0 0.1 0" };
@@ -73,7 +73,7 @@ function getDragonAnimation() {
     } else if (width <= 430 && width > 375) {
 
         return { to: "0.5 2 -5.5" };
-    } else if (width <= 375) {
+    } else if (width <= 375 && width > 320) {
 
         return { to: "0.5 2 -5.5" };
     } else return { to: "2.5 2 0" };
@@ -100,7 +100,7 @@ function getDragonScale() {
     } else if (width <= 430 && width > 375) {
 
         return { scale: "3.5 3.5 3.5" };
-    } else if (width <= 375) {
+    } else if (width <= 375 && width > 320) {
 
         return { scale: "3.5 3.5 3.5" };
     } else return { scale: "3.5 3.5 3.5" };
