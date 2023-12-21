@@ -12,7 +12,7 @@ const fadeIn = () => ({
         if (!mesh) return;
         this.setOpacity(mesh, 0);
         this.mesh = mesh;
-        this.startTime = Date.now() + 2000;
+        this.startTime = Date.now() + 4000;
         this.animateFadeIn();
     },
 

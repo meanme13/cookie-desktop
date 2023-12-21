@@ -25,6 +25,9 @@ const sceneLoaded = () => ({
             }, 4000 );
 
             setTimeout(() => {
+                const success = document.getElementById("success");
+                const congrats = document.getElementById("congratsContainer");
+                const sendWishText = document.getElementById("sendWishText");
                 const showCookie = document.getElementById("showCookie");
                 const cookieTip = document.getElementById("cookieTip");
                 const sendWish = document.getElementById("sendWish");
@@ -37,6 +40,12 @@ const sceneLoaded = () => ({
                 const againCookie = document.getElementById("againCookie");
                 const katana = document.getElementById("katana");
                 const width = window.screen.width;
+
+                if (width < 768) {
+                    congrats.classList.add("blur");
+                    sendWishText.classList.add("blur");
+                    success.classList.add("blur");
+                }
 
                 againCookie.addEventListener('click', () => {
                     localStorage.setItem('newCookie', true);
@@ -60,7 +69,12 @@ const sceneLoaded = () => ({
                     moveDragon();
                     document.getElementById("congrats").style.display = 'none';
                     model2.setAttribute("fade-in", "");
-                    setTimeout(() => {model2.setAttribute("visible", true); isAbleToCut = true }, 1000);
+                    setTimeout(() => {
+                        model2.setAttribute("visible", true); 
+                        isAbleToCut = true;
+                        model2.setAttribute('animation', 
+                            `property: rotation; to: 0 -360 0; dur: 8000; easing: easeOutElastic; delay: 0; loop: 1`);
+                    }, 1000);
                     setTimeout(() => {
                         if (width >= 1024) {
                             katana.style.display = 'block';
@@ -88,7 +102,9 @@ const sceneLoaded = () => ({
 
                     model2.setAttribute("fade-in", "");
                     setTimeout(() => {
-                        model2.setAttribute("visible", true); 
+                        model2.setAttribute("visible", true);
+                        model2.setAttribute('animation', 
+                            `property: rotation; to: 0 -360 0; dur: 5000; easing: easeOutElastic; delay: 1000; loop: 1`);
                         isAbleToCut = true;
                     }, 1200);
 

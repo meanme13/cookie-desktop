@@ -1,65 +1,109 @@
 function getCookiePosition() {
     const width = window.screen.width;
 
-    const resolutions = {
-        2560: { pos: "0 0 -3" },
-        1920: { pos: "0 0 -3" },
-        1440: { pos: "0 0 -3" },
-        1024: { pos: "0 0 -3" },
-        768: { pos: "0 0 -3" },
-        430: { pos: "0 3 -3" },
-        375: { pos: "0 3 -3" },
-    };
+    if (width <= 2560 && width > 1920) {
 
-    return resolutions[width] || { pos: "0 0 0" };
+        return { pos: "0 0 -2" };
+    } else if (width <= 1920 && width > 1440) {
+        
+        return { pos: "0 0 -3" };
+    } else if (width <= 1440 && width > 1024) {
+
+        return { pos: "0 0 -3" };
+    } else if (width <= 1024 && width > 768) {
+
+        return { pos: "0 0 -3" };
+    } else if (width <= 768 && width > 430) {
+
+        return { pos: "0 0 -3" };
+    } else if (width <= 430 && width > 375) {
+
+        return { pos: "0 2 -4" };
+    } else if (width <= 375) {
+
+        return { pos: "0 2 -4" };
+    } else return { pos: "0 0 -3" };
 }
 
 function getDragonPosition() {
     const width = window.screen.width;
 
-    const resolutions = {
-        2560: { from: "0 2 0", to: "0 2.1 0"},
-        1920: { from: "-2.9 1.3 0", to: "-2.9 1.4 0"},
-        1440: { from: "-0.5 1.6 -1", to: "-0.5 1.7 -1"},
-        1024: { from: "-2 2 -2", to: "-2 2.1 -2"},
-        768: { from: "-2 3.3 -3", to: "-2 3.4 -3"},
-        430: { from: "2.5 2.3 -4", to: "2.5 2.4 -4"},
-        375: { from: "2.5 2.3 -4", to: "2.5 2.4 -4"},
-    };
+    if (width <= 2560 && width > 1920) {
 
-    return resolutions[width] || { from: "0 0 0", to: "0 0.1 0" };
+        return { from: "-2.2 1.3 0", to: "-2.2 1.4 0"};
+    } else if (width <= 1920 && width > 1440) {
+
+        return { from: "-2.2 1.3 0", to: "-2.2 1.4 0"};
+    } else if (width <= 1440 && width > 1024) {
+
+        return { from: "-2.2 1.3 0", to: "-2.2 1.4 0"};
+    } else if (width <= 1024 && width > 768) {
+
+        return { from: "-2 2 -2", to: "-2 2.1 -2"};
+    } else if (width <= 768 && width > 430) {
+
+        return { from: "-1.8 3.8 -3.5", to: "-1.8 3.9 -3.5"};
+    } else if (width <= 430 && width > 375) {
+
+        return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
+    } else if (width <= 375) {
+
+        return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
+    } else return { from: "0 0 0", to: "0 0.1 0" };
 }
 
 function getDragonAnimation() {
     const width = window.screen.width;
 
-    const resolutions = {
-        2560: { to: "4 0.4 -1" },
-        1920: { to: "2.2 1.4 -1" },
-        1440: { to: "1 1 -0.5" },
-        1024: { to: "2 1 -3" },
-        768: { to: "-0.3 0 -6" },
-        430: { to: "2.5 2 -4" },
-        375: { to: "2.5 2 -4" }
-    };
+    if (width <= 2560 && width > 1920) {
+        
+        return { to: "2.2 1.4 -1" };
+    } else if (width <= 1920 && width > 1440) {
+        
+        return { to: "2.2 1.4 -1" };
+    } else if (width <= 1440 && width > 1024) {
 
-    return resolutions[width] || { from: "0 -0.1 0", to: "0 0.1 0" };
+        return { to: "2 1 -0.5" };
+    } else if (width <= 1024 && width > 768) {
+
+        return { to: "2 1 -3" };
+    } else if (width <= 768 && width > 430) {
+
+        return { to: "-0.3 0 -6" };
+    } else if (width <= 430 && width > 375) {
+
+        return { to: "0.5 2 -5.5" };
+    } else if (width <= 375) {
+
+        return { to: "0.5 2 -5.5" };
+    } else return { to: "2.5 2 0" };
 }
 
 function getDragonScale() {
     const width = window.screen.width;
 
-    const resolutions = {
-        2560: { scale: "4.5 4.5 4.5"},
-        1920: { scale: "4 4 4"},
-        1440: { scale: "4.5 4.5 4.5"},
-        1024: { scale: "4.5 4.5 4.5"},
-        768: { scale: "4.5 4.5 4.5"},
-        430: { scale: "3.5 3.5 3.5"},
-        375: { scale: "3.5 3.5 3.5"}
-    };
+    if (width <= 2560 && width > 1920) {
+        
+        return { scale: "4 4 4"};
+    } else if (width <= 1920 && width > 1440) {
+        
+        return { scale: "4 4 4"};
+    } else if (width <= 1440 && width > 1024) {
 
-    return resolutions[width] || { scale: "1 1 1" };
+        return { scale: "4 4 4" };
+    } else if (width <= 1024 && width > 768) {
+
+        return { scale: "4.5 4.5 4.5" };
+    } else if (width <= 768 && width > 430) {
+
+        return { scale: "4.5 4.5 4.5" };
+    } else if (width <= 430 && width > 375) {
+
+        return { scale: "3.5 3.5 3.5" };
+    } else if (width <= 375) {
+
+        return { scale: "3.5 3.5 3.5" };
+    } else return { scale: "3.5 3.5 3.5" };
 }
 
 const resizeModels = () => ({
@@ -71,6 +115,10 @@ const resizeModels = () => ({
         const { from, to } = getDragonPosition();
         const { scale } = getDragonScale();
         const { pos } = getCookiePosition();
+
+        console.log("FROM, TO", from, to);
+        console.log("SCALE", scale);
+        console.log("POS", pos);
 
         if (model) {
             model.setAttribute('animation', 

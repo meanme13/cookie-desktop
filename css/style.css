@@ -16,6 +16,10 @@ body {
     height: 100%;
 }
 
+.blur {
+    background: rgba(33, 33, 33, 0.70);
+}
+
 @keyframes fadeIn {
     0% {
         scale: 0;
