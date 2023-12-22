@@ -25,9 +25,9 @@ const sceneLoaded = () => ({
             }, 4000 );
 
             setTimeout(() => {
-                const success = document.getElementById("successText");
-                const congrats = document.getElementById("congratsContainer");
-                const sendWishText = document.getElementById("sendWishText");
+                const success = document.getElementById("success");
+                const congrats = document.getElementById("congrats");
+                const sendWishText = document.getElementById("sendWishContainer");
                 const showCookie = document.getElementById("showCookie");
                 const cookieTip = document.getElementById("cookieTip");
                 const sendWish = document.getElementById("sendWish");
@@ -69,9 +69,9 @@ const sceneLoaded = () => ({
                     moveDragon();
                     document.getElementById("congrats").style.display = 'none';
                     model2.setAttribute("fade-in", "");
+                    setTimeout(() => { isAbleToCut = true; }, 3500);
                     setTimeout(() => {
                         model2.setAttribute("visible", true); 
-                        isAbleToCut = true;
                         model2.setAttribute('animation', 
                             `property: rotation; to: 0 -360 0; dur: 8000; easing: easeOutElastic; delay: 0; loop: 1`);
                     }, 1000);
@@ -99,13 +99,13 @@ const sceneLoaded = () => ({
                     model.setAttribute("animation-mixer", "clip: clip1; loop: once; clampWhenFinished: true; timeScale: 0.7");
                     congrats.classList.add("fadeOut");
                     setTimeout(() => {congrats.style.display = 'none'}, 300);
+                    setTimeout(() => { isAbleToCut = true; }, 3500);
 
                     model2.setAttribute("fade-in", "");
                     setTimeout(() => {
                         model2.setAttribute("visible", true);
                         model2.setAttribute('animation', 
                             `property: rotation; to: 0 -360 0; dur: 5000; easing: easeOutElastic; delay: 1000; loop: 1`);
-                        isAbleToCut = true;
                     }, 1200);
 
                     setTimeout(() => {

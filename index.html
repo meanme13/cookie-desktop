@@ -26,9 +26,15 @@
         <a-assets>
             <a-asset-item id="animatedModel" src="assets/models/johnson.glb"></a-asset-item>
             <a-asset-item id="animatedModel2" src="assets/models/cockie.glb"></a-asset-item>
+            <!-- <video id="video"
+               loop
+               crossorigin="anonymous"
+               playsinline webkit-playsinline
+               src="assets/swipe.mp4">
+            </video> -->
         </a-assets>
 
-        <a-camera id="camera" look-controls-enabled="false" fov="40" position="0 2 15"></a-camera>
+        <a-camera id="camera" look-controls-enabled="false" wasd-controls-enabled="false" fov="40" position="0 2 15"></a-camera>
 
         <a-entity
         id="light1"
@@ -111,12 +117,25 @@
         
         <a-entity
             id="model3"
-            scale="3 3 3"
+            scale="3.5 3.5 3.5"
             rotation="0 0 0"
             visible="false"
             shadow="receive: true; cast: true"
             >
         </a-entity>
+
+        <!-- <a-video 
+        play-on-click 
+        hide-on-play="#video" 
+        id="myVideo" 
+        src="#video" 
+        autoplay 
+        loop="once"
+        width="16"
+        height="9"
+        position="0 0 -20"
+        material="depthTest: 'true', alphaTest: 1"
+        ></a-video> -->
         
     </a-scene>
 

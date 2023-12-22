@@ -12,12 +12,12 @@
 .send-wish-container {
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 40%;
 }
 
 .send-wish-h1 {
     color: #EEE1D3;
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -27,11 +27,11 @@
 
 .send-wish-p {
     color: #EEE1D3;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-    margin: 1.2vw 0 0 0;
+    margin: 3vw 0 0 0;
 }
 
 .mail {
@@ -42,13 +42,12 @@
     background: transparent;
     flex: 1 0 0;
     color: #D8C5B1;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    margin: 2vw 0 0 0;
+    margin: 3vw 0 0 0;
     transition: .3s;
-    /* height: 3.187rem; */
 }
 
 .wish-text {
@@ -59,7 +58,7 @@
     border: 1px solid #8A7452;
     background: transparent;
     color: #D8C5B1;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 400;
     resize: none;
@@ -81,7 +80,7 @@
 
 .mail::placeholder, .wish-text::placeholder {
     color: #8A7452;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -180,21 +179,57 @@ input[type="checkbox"]:hover::before {
 
 @media screen and (max-width: 1024px) {
     .send-wish-container {
-        width: 42%;
+        width: 45%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .send-wish-container {
-        width: 50%;
+        width: 55%;
     }
 
     .send-wish-h1 {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .send-wish-p  {
+        font-size: 2.5vw;
+        margin-top: 4vw;
+    }
+
+    .mail, .wish-text {
+        font-size: 2.5vw;
+    }
+
+    .wish-text {
+        height: 10vw;
+    }
+
+    .mail {
+        margin-top: 4vw;
+    }
+
+    .confirm-wish {
+        margin-top: 0;
+    }
+
+    .btn-check {
+        margin-top: 3vw;
+    }
+
+    .check-rules, .check-underline {
         font-size: 2vw;
+    }
+
+    input[type="checkbox"] {
+        width: 2.5vw;
+        height: 2vw;
+        margin-right: 1%;
+    }
+
+    input[type="checkbox"]::before {
+        width: 1vw;
+        height: 1vw;
     }
 }
 
@@ -213,20 +248,25 @@ input[type="checkbox"]:hover::before {
     }
     
     .send-wish-p {
-        margin: 3% 0 0 0;
+        margin: 5% 0 0 0;
         padding: 0;
         font-size: 4vw;
     }
 
     .check-rules, .check-underline {
         font-size: 3.2vw;
-        margin: 0 0 0 2%;
+        margin: 5% 0 0 2%;
     }
 
     input[type="checkbox"] {
-        width: 3.5vw;
+        width: 4vw;
         height: 3.5vw;
-        margin-right: 2%;
+        margin-right: 1%;
+    }
+
+    input[type="checkbox"]::before {
+        width: 2.5vw;
+        height: 2.5vw;
     }
 
     .mail, .wish-text {
@@ -243,7 +283,7 @@ input[type="checkbox"]:hover::before {
     }
 
     .confirm-wish:enabled, .confirm-wish:disabled {
-        margin-top: 4%;
+        margin-top: 5%;
         padding: 4vw  5vw;
         font-size: 3.2vw;
         width: 100%;

@@ -3,13 +3,13 @@ function getCookiePosition() {
 
     if (width <= 2560 && width > 1920) {
 
-        return { pos: "0 0 -2" };
+        return { pos: "0 2 -2" };
     } else if (width <= 1920 && width > 1440) {
         
-        return { pos: "0 0 -3" };
+        return { pos: "0 1.5 -3" };
     } else if (width <= 1440 && width > 1024) {
 
-        return { pos: "0 0 -3" };
+        return { pos: "0 1 -3" };
     } else if (width <= 1024 && width > 768) {
 
         return { pos: "0 0 -3" };
@@ -19,7 +19,7 @@ function getCookiePosition() {
     } else if (width <= 430 && width > 375) {
 
         return { pos: "0 1 -4" };
-    } else if (width <= 375 && width > 320) {
+    } else if (width <= 375 && width > 250) {
 
         return { pos: "0 2 -4" };
     } else return { pos: "0 0 -3" };
@@ -46,7 +46,7 @@ function getDragonPosition() {
     } else if (width <= 430 && width > 375) {
 
         return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
-    } else if (width <= 375 && width > 320) {
+    } else if (width <= 375 && width > 250) {
 
         return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
     } else return { from: "0 0 0", to: "0 0.1 0" };
@@ -73,7 +73,7 @@ function getDragonAnimation() {
     } else if (width <= 430 && width > 375) {
 
         return { to: "0.5 2 -5.5" };
-    } else if (width <= 375 && width > 320) {
+    } else if (width <= 375 && width > 250) {
 
         return { to: "0.5 2 -5.5" };
     } else return { to: "2.5 2 0" };
@@ -100,7 +100,7 @@ function getDragonScale() {
     } else if (width <= 430 && width > 375) {
 
         return { scale: "3.5 3.5 3.5" };
-    } else if (width <= 375 && width > 320) {
+    } else if (width <= 375 && width > 250) {
 
         return { scale: "3.5 3.5 3.5" };
     } else return { scale: "3.5 3.5 3.5" };
