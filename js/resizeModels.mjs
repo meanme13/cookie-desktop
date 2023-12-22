@@ -45,10 +45,10 @@ function getDragonPosition() {
         return { from: "-1.8 3.8 -3.5", to: "-1.8 3.9 -3.5"};
     } else if (width <= 430 && width > 375) {
 
-        return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
+        return { from: "-3.5 3.3 -5", to: "-3.5 3.4 -5"};
     } else if (width <= 375 && width > 250) {
 
-        return { from: "-3.5 4 -5", to: "-3.5 4.1 -5"};
+        return { from: "-3.5 3.3 -5", to: "-3.5 3.4 -5"};
     } else return { from: "0 0 0", to: "0 0.1 0" };
 }
 
@@ -72,10 +72,10 @@ function getDragonAnimation() {
         return { to: "-0.3 0 -6" };
     } else if (width <= 430 && width > 375) {
 
-        return { to: "0.5 2 -5.5" };
+        return { to: "0.5 1.3 -5.5" };
     } else if (width <= 375 && width > 250) {
 
-        return { to: "0.5 2 -5.5" };
+        return { to: "0.5 1.3 -5.5" };
     } else return { to: "2.5 2 0" };
 }
 
