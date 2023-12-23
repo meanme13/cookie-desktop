@@ -5,7 +5,7 @@ setTimeout(() => {
     const qrContainer = document.getElementById("qrContainer");
 
     showAR.addEventListener('click', () => {
-        if (width < 768) return // location.('insert location here');
+        if (width < 768) location.href('https://meanme13.github.io/cookie/');
 
         qrWrapper.style.display = 'flex';
         qrContainer.classList.add('fadeIn'); 
