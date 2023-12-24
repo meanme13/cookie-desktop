@@ -1,4 +1,9 @@
 export function action() {
+    const swipe = document.getElementById("swipe");
+    const videoEl = swipe.getAttribute('material').src;
+    swipe.object3D.visible = true;
+    videoEl.play();
+
     document.getElementById("model2").setAttribute("animation-mixer", "clip: cock; timeScale: 1; clampWhenFinished: true; loop: once");
     document.getElementById("model3").setAttribute("visible", true);
     document.getElementById("model3").setAttribute('animation-mixer', "clip: paper; clampWhenFinished: true; loop: once");

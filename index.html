@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js" integrity="sha512-6p9lGA4Cm89KiwN1CixiOVQU2H9e13LeYoN6/Hj/qoUhtrMW5vNiqQz9Z96Z7/I8u89ghL6SPBz9na5HFVzF3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.149.0/three.min.js" integrity="sha512-6p9lGA4Cm89KiwN1CixiOVQU2H9e13LeYoN6/Hj/qoUhtrMW5vNiqQz9Z96Z7/I8u89ghL6SPBz9na5HFVzF3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.139.0/three.min.js" integrity="sha512-RCrjEwim29ppG7paaYLgMWL9clOdo3Cx6IvRl15CpO4F/IEVrLTHf4ohB3WyCcLHezMs+hXZShGTLrQzg7dUkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.cdnfonts.com/css/circe" rel="stylesheet">
@@ -26,12 +27,12 @@
         <a-assets>
             <a-asset-item id="animatedModel" src="assets/models/johnson.glb"></a-asset-item>
             <a-asset-item id="animatedModel2" src="assets/models/cockie.glb"></a-asset-item>
-            <!-- <video id="video"
+            <video id="video"
                loop
                crossorigin="anonymous"
                playsinline webkit-playsinline
                src="assets/swipe.mp4">
-            </video> -->
+            </video>
         </a-assets>
 
         <a-camera id="camera" look-controls-enabled="false" wasd-controls-enabled="false" fov="40" position="0 2 15"></a-camera>
@@ -125,18 +126,14 @@
             >
         </a-entity>
 
-        <!-- <a-video 
-        play-on-click 
-        hide-on-play="#video" 
-        id="myVideo" 
-        src="#video" 
-        autoplay 
-        loop="once"
-        width="16"
-        height="9"
-        position="0 0 -20"
-        material="depthTest: 'true', alphaTest: 1"
-        ></a-video> -->
+        <a-entity
+            hide-on-play="#video"
+            position="1 3 1"
+            id="swipe"
+            loop="once"
+            material="shader: chromakey; src: #video; color: 0.0 0.0 0.0"
+            geometry="primitive: plane; height: 9; width: 12;"
+            ></a-entity>
         
     </a-scene>
 

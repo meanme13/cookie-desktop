@@ -66,6 +66,12 @@
     left: 45%;
     z-index: 400;
     display: none;
+    width: 18vw;
+    height: 25vh;
+    z-index: 300;
+    background-image: url('../assets/katana.png');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @media screen and (max-width: 768px) {

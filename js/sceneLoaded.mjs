@@ -81,8 +81,8 @@ const sceneLoaded = () => ({
                             katana.classList.add("fadeIn");
 
                             document.addEventListener("mousemove", function (e) {
-                                katana.style.left = e.pageX - katana.width / -10 + "px";
-                                katana.style.top = e.pageY - katana.height / 2+ "px";
+                                katana.style.left = e.pageX - katana.offsetWidth + 80 + "px";
+                                katana.style.top = e.pageY - katana.offsetHeight + 60 + "px";
                             });
                         }
                     }, 1500);

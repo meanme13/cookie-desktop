@@ -10,10 +10,10 @@ const mouseMove = () => ({
         this.handleTouchMove = this.handleTouchMove.bind(this);
         this.handleTouchEnd = this.handleTouchEnd.bind(this);
 
-        this.el.addEventListener('mousemove', this.handleMouseMove);
-        this.el.addEventListener('mouseup', this.handleMouseUp);
-        this.el.addEventListener('touchmove', this.handleTouchMove);
-        this.el.addEventListener('touchend', this.handleTouchEnd);
+        document.body.addEventListener('mousemove', this.handleMouseMove);
+        document.body.addEventListener('mouseup', this.handleMouseUp);
+        document.body.addEventListener('touchmove', this.handleTouchMove);
+        document.body.addEventListener('touchend', this.handleTouchEnd);
     },
 
     handleMouseMove: function (event) {
